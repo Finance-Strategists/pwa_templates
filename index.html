@@ -4,282 +4,474 @@
 <head>
     <!-- INITIAL META -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Web Vitals Starter Templates</title>
-    <meta name="description" content="A Starter Templates optimized for web vitals.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{TITLE}}}}</title>
+    <meta name="description" content="{{META_DESCRIPTION}}">
 
     <!-- PRELOAD: we know the exact url of the source -->
-    <link rel="preload" href="assets/logo.svg" as="image" type="image/svg+xml" importance="high">
-      <!-- https://github.com/google/woff2 -->
-    <link rel="preload" href="assets/opensans.woff2" as="font" type="font/woff2" importance="high" crossorigin>
+    <link rel="preload" href="assets/finance-strategists_logo.png.webp" as="image" type="image/webp" importance="high">
 
     <!-- PRECONNECT: we know the exact domain will be used -->
       <!-- Google Tag Manager -->
     <link rel="preconnect" href="https://www.googletagmanager.com" importance="high" crossorigin>
-      <!-- Demo -->
-    <link rel="preconnect" href="https://via.placeholder.com" importance="low" crossorigin>
-    <link rel="preconnect" href="https://static.cloudflareinsights.com" importance="low" crossorigin>
-    <link rel="preconnect" href="https://cloudflareinsights.com" importance="low" crossorigin>
 
     <!-- DNS-PREFETCH: we know the exact domain *may* be used -->
-      <!-- YouTube -->
-    <link rel="dns-prefetch" href="https://www.youtube.com" importance="low" crossorigin>
-    <link rel="dns-prefetch" href="https://i.ytimg.com" importance="low" crossorigin>
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com" importance="low" crossorigin>
-    <link rel="dns-prefetch" href="https://www.gstatic.com" importance="low" crossorigin>
       <!-- Google Maps -->
     <link rel="dns-prefetch" href="https://maps.google.com" importance="low" crossorigin>
     <link rel="dns-prefetch" href="https://maps.googleapis.com" importance="low" crossorigin>
 
     <!-- CRITICAL CSS: includes only css used in the initial viewport -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="dist/output.css" rel="stylesheet">
     <style>
-      /* Custom Reset */
-      *, *::before, *::after {
-        box-sizing: border-box;
-      }
-      * {
-        margin: 0;
-      }
-      html, body {
-        background-color: #ffffff;
-        color: #000000;
-        height: 100%;
-      }
-      body {
-        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; /* web-safe, system font stack */
-        font-size: clamp(16px, 2vw, 18px); /* https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/ */
-        line-height: 1.5em;
-        -webkit-font-smoothing: antialiased;
-      }
-      img, picture, video, canvas, svg, iframe, figure {
-        display: block;
-        height: auto;
-        max-width: 100%;
-      }
-      input, button, textarea, select {
-        font: inherit;
-      }
-      h1, h2, h3, h4, h5, h6, p {
-        overflow-wrap: break-word;
-      }
-      /* Typography */
-      @font-face {
-        font-family: "Open Sans";
-        font-style: normal;
-        font-weight: 600;
-        font-display: optional; /* https://web.dev/preload-optional-fonts/ */
-        src: local("Open Sans SemiBold"), local("OpenSans-SemiBold"), url(assets/opensans.woff2) format("woff2");
-      }
-      h1, h2, h3, h4, h5, h6 {
-        font-family: "OpenSans-SemiBold", sans-serif;
-        font-weight: 700;
-        margin-bottom: 1em;
-      }
-      p {
-        margin-bottom: 1.5em;
-      }
-      a {
-        color: #000000;
-        text-decoration: underline;
-      }
-      /* Initial Viewport */
-      header {
-        background-color: #777777;
-        display: flex; /* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
-        flex-direction: column;
-      }
-      header nav {
-        align-items: center;
-        background-color: #aaaaaa;
-        display: flex;
-        justify-content: space-between;
-        padding: 1em;
-      }
-      header nav ul {
-        list-style-type: none;
-        text-align: right;
-      }
-      header nav ul li {
-        display: block;
-      }
-      @media screen and (min-width: 600px) {
-        header nav ul li {
-          display: inline-block;
-        }
-      }
-      header nav ul li a {
-        color: #000000;
-        padding: 1em;
-      }
-      header h1 {
-        font-size: clamp(48px, 5vw, 60px);
-        text-align: center;
-        line-height: 1.2em;
-        margin: 0 auto;
-        max-width: 900px;
-        padding: 15vh 5vw; /* pushes main content below the viewport so that h1 is the lcp element */
-      }
-      main {
-        margin: 0 auto;
-        max-width: 900px;
-        padding: 3em 1em;
-      }
+    html {
+      overflow-y: overlay; /* prevents cls caused by the scrollbar */
+      scroll-behavior: smooth; /* smooth scrolling to in-page anchors */
+    }
     </style>
 
-    <!-- MAIN CSS: remaining css not used in the initial viewport -->
-      <!-- Non-render Blocking with Fallback -->
-    <link rel="preload" href="assets/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'" importance="high">
-    <noscript><link rel="stylesheet" href="assets/main.css"></noscript>
-
-    <!-- CRITICAL JS: includes only js used for initial performance and tracking -->
-    <script>
-        /*! lazysizes - v5.3.2 https://github.com/aFarkas/lazysizes/blob/gh-pages/lazysizes.js */
-        !function(e){var t=function(u,D,f){"use strict";var k,H;if(function(){var e;var t={lazyClass:"lazyload",loadedClass:"lazyloaded",loadingClass:"lazyloading",preloadClass:"lazypreload",errorClass:"lazyerror",autosizesClass:"lazyautosizes",fastLoadedClass:"ls-is-cached",iframeLoadMode:0,srcAttr:"data-src",srcsetAttr:"data-srcset",sizesAttr:"data-sizes",minSize:40,customMedia:{},init:true,expFactor:1.5,hFac:.8,loadMode:2,loadHidden:true,ricTimeout:0,throttleDelay:125};H=u.lazySizesConfig||u.lazysizesConfig||{};for(e in t){if(!(e in H)){H[e]=t[e]}}}(),!D||!D.getElementsByClassName){return{init:function(){},cfg:H,noSupport:true}}var O=D.documentElement,i=u.HTMLPictureElement,P="addEventListener",$="getAttribute",q=u[P].bind(u),I=u.setTimeout,U=u.requestAnimationFrame||I,o=u.requestIdleCallback,j=/^picture$/i,r=["load","error","lazyincluded","_lazyloaded"],a={},G=Array.prototype.forEach,J=function(e,t){if(!a[t]){a[t]=new RegExp("(\\s|^)"+t+"(\\s|$)")}return a[t].test(e[$]("class")||"")&&a[t]},K=function(e,t){if(!J(e,t)){e.setAttribute("class",(e[$]("class")||"").trim()+" "+t)}},Q=function(e,t){var a;if(a=J(e,t)){e.setAttribute("class",(e[$]("class")||"").replace(a," "))}},V=function(t,a,e){var i=e?P:"removeEventListener";if(e){V(t,a)}r.forEach(function(e){t[i](e,a)})},X=function(e,t,a,i,r){var n=D.createEvent("Event");if(!a){a={}}a.instance=k;n.initEvent(t,!i,!r);n.detail=a;e.dispatchEvent(n);return n},Y=function(e,t){var a;if(!i&&(a=u.picturefill||H.pf)){if(t&&t.src&&!e[$]("srcset")){e.setAttribute("srcset",t.src)}a({reevaluate:true,elements:[e]})}else if(t&&t.src){e.src=t.src}},Z=function(e,t){return(getComputedStyle(e,null)||{})[t]},s=function(e,t,a){a=a||e.offsetWidth;while(a<H.minSize&&t&&!e._lazysizesWidth){a=t.offsetWidth;t=t.parentNode}return a},ee=function(){var a,i;var t=[];var r=[];var n=t;var s=function(){var e=n;n=t.length?r:t;a=true;i=false;while(e.length){e.shift()()}a=false};var e=function(e,t){if(a&&!t){e.apply(this,arguments)}else{n.push(e);if(!i){i=true;(D.hidden?I:U)(s)}}};e._lsFlush=s;return e}(),te=function(a,e){return e?function(){ee(a)}:function(){var e=this;var t=arguments;ee(function(){a.apply(e,t)})}},ae=function(e){var a;var i=0;var r=H.throttleDelay;var n=H.ricTimeout;var t=function(){a=false;i=f.now();e()};var s=o&&n>49?function(){o(t,{timeout:n});if(n!==H.ricTimeout){n=H.ricTimeout}}:te(function(){I(t)},true);return function(e){var t;if(e=e===true){n=33}if(a){return}a=true;t=r-(f.now()-i);if(t<0){t=0}if(e||t<9){s()}else{I(s,t)}}},ie=function(e){var t,a;var i=99;var r=function(){t=null;e()};var n=function(){var e=f.now()-a;if(e<i){I(n,i-e)}else{(o||r)(r)}};return function(){a=f.now();if(!t){t=I(n,i)}}},e=function(){var v,m,c,h,e;var y,z,g,p,C,b,A;var n=/^img$/i;var d=/^iframe$/i;var E="onscroll"in u&&!/(gle|ing)bot/.test(navigator.userAgent);var _=0;var w=0;var M=0;var N=-1;var L=function(e){M--;if(!e||M<0||!e.target){M=0}};var x=function(e){if(A==null){A=Z(D.body,"visibility")=="hidden"}return A||!(Z(e.parentNode,"visibility")=="hidden"&&Z(e,"visibility")=="hidden")};var W=function(e,t){var a;var i=e;var r=x(e);g-=t;b+=t;p-=t;C+=t;while(r&&(i=i.offsetParent)&&i!=D.body&&i!=O){r=(Z(i,"opacity")||1)>0;if(r&&Z(i,"overflow")!="visible"){a=i.getBoundingClientRect();r=C>a.left&&p<a.right&&b>a.top-1&&g<a.bottom+1}}return r};var t=function(){var e,t,a,i,r,n,s,o,l,u,f,c;var d=k.elements;if((h=H.loadMode)&&M<8&&(e=d.length)){t=0;N++;for(;t<e;t++){if(!d[t]||d[t]._lazyRace){continue}if(!E||k.prematureUnveil&&k.prematureUnveil(d[t])){R(d[t]);continue}if(!(o=d[t][$]("data-expand"))||!(n=o*1)){n=w}if(!u){u=!H.expand||H.expand<1?O.clientHeight>500&&O.clientWidth>500?500:370:H.expand;k._defEx=u;f=u*H.expFactor;c=H.hFac;A=null;if(w<f&&M<1&&N>2&&h>2&&!D.hidden){w=f;N=0}else if(h>1&&N>1&&M<6){w=u}else{w=_}}if(l!==n){y=innerWidth+n*c;z=innerHeight+n;s=n*-1;l=n}a=d[t].getBoundingClientRect();if((b=a.bottom)>=s&&(g=a.top)<=z&&(C=a.right)>=s*c&&(p=a.left)<=y&&(b||C||p||g)&&(H.loadHidden||x(d[t]))&&(m&&M<3&&!o&&(h<3||N<4)||W(d[t],n))){R(d[t]);r=true;if(M>9){break}}else if(!r&&m&&!i&&M<4&&N<4&&h>2&&(v[0]||H.preloadAfterLoad)&&(v[0]||!o&&(b||C||p||g||d[t][$](H.sizesAttr)!="auto"))){i=v[0]||d[t]}}if(i&&!r){R(i)}}};var a=ae(t);var S=function(e){var t=e.target;if(t._lazyCache){delete t._lazyCache;return}L(e);K(t,H.loadedClass);Q(t,H.loadingClass);V(t,B);X(t,"lazyloaded")};var i=te(S);var B=function(e){i({target:e.target})};var T=function(e,t){var a=e.getAttribute("data-load-mode")||H.iframeLoadMode;if(a==0){e.contentWindow.location.replace(t)}else if(a==1){e.src=t}};var F=function(e){var t;var a=e[$](H.srcsetAttr);if(t=H.customMedia[e[$]("data-media")||e[$]("media")]){e.setAttribute("media",t)}if(a){e.setAttribute("srcset",a)}};var s=te(function(t,e,a,i,r){var n,s,o,l,u,f;if(!(u=X(t,"lazybeforeunveil",e)).defaultPrevented){if(i){if(a){K(t,H.autosizesClass)}else{t.setAttribute("sizes",i)}}s=t[$](H.srcsetAttr);n=t[$](H.srcAttr);if(r){o=t.parentNode;l=o&&j.test(o.nodeName||"")}f=e.firesLoad||"src"in t&&(s||n||l);u={target:t};K(t,H.loadingClass);if(f){clearTimeout(c);c=I(L,2500);V(t,B,true)}if(l){G.call(o.getElementsByTagName("source"),F)}if(s){t.setAttribute("srcset",s)}else if(n&&!l){if(d.test(t.nodeName)){T(t,n)}else{t.src=n}}if(r&&(s||l)){Y(t,{src:n})}}if(t._lazyRace){delete t._lazyRace}Q(t,H.lazyClass);ee(function(){var e=t.complete&&t.naturalWidth>1;if(!f||e){if(e){K(t,H.fastLoadedClass)}S(u);t._lazyCache=true;I(function(){if("_lazyCache"in t){delete t._lazyCache}},9)}if(t.loading=="lazy"){M--}},true)});var R=function(e){if(e._lazyRace){return}var t;var a=n.test(e.nodeName);var i=a&&(e[$](H.sizesAttr)||e[$]("sizes"));var r=i=="auto";if((r||!m)&&a&&(e[$]("src")||e.srcset)&&!e.complete&&!J(e,H.errorClass)&&J(e,H.lazyClass)){return}t=X(e,"lazyunveilread").detail;if(r){re.updateElem(e,true,e.offsetWidth)}e._lazyRace=true;M++;s(e,t,r,i,a)};var r=ie(function(){H.loadMode=3;a()});var o=function(){if(H.loadMode==3){H.loadMode=2}r()};var l=function(){if(m){return}if(f.now()-e<999){I(l,999);return}m=true;H.loadMode=3;a();q("scroll",o,true)};return{_:function(){e=f.now();k.elements=D.getElementsByClassName(H.lazyClass);v=D.getElementsByClassName(H.lazyClass+" "+H.preloadClass);q("scroll",a,true);q("resize",a,true);q("pageshow",function(e){if(e.persisted){var t=D.querySelectorAll("."+H.loadingClass);if(t.length&&t.forEach){U(function(){t.forEach(function(e){if(e.complete){R(e)}})})}}});if(u.MutationObserver){new MutationObserver(a).observe(O,{childList:true,subtree:true,attributes:true})}else{O[P]("DOMNodeInserted",a,true);O[P]("DOMAttrModified",a,true);setInterval(a,999)}q("hashchange",a,true);["focus","mouseover","click","load","transitionend","animationend"].forEach(function(e){D[P](e,a,true)});if(/d$|^c/.test(D.readyState)){l()}else{q("load",l);D[P]("DOMContentLoaded",a);I(l,2e4)}if(k.elements.length){t();ee._lsFlush()}else{a()}},checkElems:a,unveil:R,_aLSL:o}}(),re=function(){var a;var n=te(function(e,t,a,i){var r,n,s;e._lazysizesWidth=i;i+="px";e.setAttribute("sizes",i);if(j.test(t.nodeName||"")){r=t.getElementsByTagName("source");for(n=0,s=r.length;n<s;n++){r[n].setAttribute("sizes",i)}}if(!a.detail.dataAttr){Y(e,a.detail)}});var i=function(e,t,a){var i;var r=e.parentNode;if(r){a=s(e,r,a);i=X(e,"lazybeforesizes",{width:a,dataAttr:!!t});if(!i.defaultPrevented){a=i.detail.width;if(a&&a!==e._lazysizesWidth){n(e,r,i,a)}}}};var e=function(){var e;var t=a.length;if(t){e=0;for(;e<t;e++){i(a[e])}}};var t=ie(e);return{_:function(){a=D.getElementsByClassName(H.autosizesClass);q("resize",t)},checkElems:t,updateElem:i}}(),t=function(){if(!t.i&&D.getElementsByClassName){t.i=true;re._();e._()}};return I(function(){H.init&&t()}),k={cfg:H,autoSizer:re,loader:e,init:t,uP:Y,aC:K,rC:Q,hC:J,fire:X,gW:s,rAF:ee}}(e,e.document,Date);e.lazySizes=t,"object"==typeof module&&module.exports&&(module.exports=t)}("undefined"!=typeof window?window:{});
-
-        /*! lazysizes unveilhooks - v5.3.2 */
-        !function(e,t){var a=function(){t(e.lazySizes),e.removeEventListener("lazyunveilread",a,!0)};t=t.bind(null,e,e.document),"object"==typeof module&&module.exports?t(require("lazysizes")):"function"==typeof define&&define.amd?define(["lazysizes"],t):e.lazySizes?a():e.addEventListener("lazyunveilread",a,!0)}(window,function(e,i,o){"use strict";var l,d,u={};function s(e,t,a){var n,r;u[e]||(n=i.createElement(t?"link":"script"),r=i.getElementsByTagName("script")[0],t?(n.rel="stylesheet",n.href=e):(n.onload=function(){n.onerror=null,n.onload=null,a()},n.onerror=n.onload,n.src=e),u[e]=!0,u[n.src||n.href]=!0,r.parentNode.insertBefore(n,r))}i.addEventListener&&(l=function(e,t){var a=i.createElement("img");a.onload=function(){a.onload=null,a.onerror=null,a=null,t()},a.onerror=a.onload,a.src=e,a&&a.complete&&a.onload&&a.onload()},addEventListener("lazybeforeunveil",function(e){var t,a,n;if(e.detail.instance==o&&!e.defaultPrevented){var r=e.target;if("none"==r.preload&&(r.preload=r.getAttribute("data-preload")||"auto"),null!=r.getAttribute("data-autoplay"))if(r.getAttribute("data-expand")&&!r.autoplay)try{r.play()}catch(e){}else requestAnimationFrame(function(){r.setAttribute("data-expand","-10"),o.aC(r,o.cfg.lazyClass)});(t=r.getAttribute("data-link"))&&s(t,!0),(t=r.getAttribute("data-script"))&&(e.detail.firesLoad=!0,s(t,null,function(){e.detail.firesLoad=!1,o.fire(r,"_lazyloaded",{},!0,!0)})),(t=r.getAttribute("data-require"))&&(o.cfg.requireJs?o.cfg.requireJs([t]):s(t)),(a=r.getAttribute("data-bg"))&&(e.detail.firesLoad=!0,l(a,function(){r.style.backgroundImage="url("+(d.test(a)?JSON.stringify(a):a)+")",e.detail.firesLoad=!1,o.fire(r,"_lazyloaded",{},!0,!0)})),(n=r.getAttribute("data-poster"))&&(e.detail.firesLoad=!0,l(n,function(){r.poster=n,e.detail.firesLoad=!1,o.fire(r,"_lazyloaded",{},!0,!0)}))}},!(d=/\(|\)|\s|'/)))});
-
-        /*! Google Tag Manager (Include All Other Ad / Tracking Scripts via GTM) */
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-XXXXXXX');
-    </script>
-
-    <!-- MAIN JS: remaining js used for continuing performance and page interactions  -->
-    <script src="assets/main.js" async importance="low"></script>
-
-    <!-- SOCIAL META -->
-      <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="">
-    <meta property="og:url" content="">
-    <meta property="og:title" content="">
-    <meta property="og:description" content="">
-    <meta property="og:image" content="">
-      <!-- Twitter -->
-    <meta property="twitter:card" content="">
-    <meta property="twitter:url" content="">
-    <meta property="twitter:title" content="">
-    <meta property="twitter:description" content="">
-    <meta property="twitter:image" content="">
-
-    <!-- FAVICON -->
-      <!-- https://www.favicon-generator.org/ -->
-    <link rel="apple-touch-icon" sizes="57x57" href="#">
-    <link rel="apple-touch-icon" sizes="60x60" href="#">
-    <link rel="apple-touch-icon" sizes="72x72" href="#">
-    <link rel="apple-touch-icon" sizes="76x76" href="#">
-    <link rel="apple-touch-icon" sizes="114x114" href="#">
-    <link rel="apple-touch-icon" sizes="120x120" href="#">
-    <link rel="apple-touch-icon" sizes="144x144" href="#">
-    <link rel="apple-touch-icon" sizes="152x152" href="#">
-    <link rel="apple-touch-icon" sizes="180x180" href="#">
-    <link rel="icon" type="image/png" sizes="192x192"  href="#">
-    <link rel="icon" type="image/png" sizes="32x32" href="#">
-    <link rel="icon" type="image/png" sizes="96x96" href="#">
-    <link rel="icon" type="image/png" sizes="16x16" href="#">
-      <!-- Place favicon.ico in the root directory -->
-    <link rel="manifest" href="#">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="">
-    <meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
 
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <header>
-        <nav aria-label="Main Menu">
-          <a href="#" class="logo"><img src="assets/logo.svg" alt="" width="50" height="50" /></a>
-            <ul>
-                <li><a href="#">Nav Link 1</a></li>
-                <li><a href="#">Nav Link 2</a></li>
-                <li><a href="#">Nav Link 3</a></li>
-            </ul>
-        </nav>
+    <header><!-- https://tailwindui.com/components/marketing/sections/heroes#component-c2665b7bbef783e2d6683ad7e2075e10 -->
+      <div class="relative bg-gray-800 overflow-hidden">
+        <div class="relative pt-6 pb-16 sm:pb-24">
+          <div>
+            <nav class="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6" aria-label="Global">
+              <div class="flex items-center flex-1">
+                <div class="flex items-center justify-between w-full md:w-auto">
+                  <a href="#">
+                    <span class="sr-only">Finance Strategists</span>
+                    <img class="h-8 w-auto sm:h-10" src="assets/finance-strategists_logo.png.webp" alt="">
+                  </a>
+                  <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" class="bg-gray-800 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-700 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white" aria-expanded="false">
+                      <span class="sr-only">Open main menu</span>
+                      <!-- Heroicon name: outline/menu -->
+                      <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="grow place-content-end hidden space-x-10 md:flex md:ml-10">
+                  <a href="#" class="font-medium text-white hover:text-gray-300">Dictionary</a>
 
-        <h1 aria-level="1">Web Vitals Starter Templates</h1>
-    </header>
+                  <a href="#" class="font-medium text-white hover:text-gray-300">Interviews</a>
 
-    <main>
-        <section>
-          <p>I use these templates as a starter for my projects. I hope you find them useful!</p>
-          <p><strong>Source: <a href="https://github.com/joncarico/web-vitals_starter-templates">https://github.com/joncarico/web-vitals_starter-templates</a></strong></p>
-          <br /><br />
+                  <a href="#" class="font-medium text-white hover:text-gray-300">Services</a>
 
-          <h2>Web Vitals Patterns</h2>
-          <p>A collection of common UX patterns optimized for Core Web Vitals. This collection includes patterns that are often tricky to implement without hurting your Core Web Vitals scores. You can use the code in these examples to help ensure your projects stay on the right track.</p>
-          <p><strong>Source: <a href="https://web.dev/patterns/web-vitals-patterns/">https://web.dev/patterns/web-vitals-patterns/</a></strong></p>
+                  <a href="#" class="font-medium text-white hover:text-gray-300">Videos</a>
 
-          <h3>Carousels</h3>
-          <div id="carousel">
-            <div id="slide-container">
-              <div class="slide" data-slideIndex="0">
-                <div class="slide-banner">Tour the Empire State Building! <a href="#">Buy tickets now.</a></div>
-                <img src="https://via.placeholder.com/1200x600.jpg?text=Sample+Image+1" width="1200" height="600" alt="Sample Image" loading="lazy">
+                  <a href="#" class="font-medium text-white hover:text-gray-300">About Us</a>
+
+                  <a href="#" class="font-medium text-white hover:text-gray-300">Contact</a>
+                </div>
               </div>
-              <div class="slide" data-slideIndex="1">
-                <div class="slide-banner">Ride the Shinkansen! <a href="#">Buy tickets now.</a></div>
-                <img src="https://via.placeholder.com/1200x600.jpg?text=Sample+Image+2" width="1200" height="600" alt="Sample Image" loading="lazy">
+            </nav>
+
+            <!--
+              Mobile menu, show/hide based on menu open state.
+
+              Entering: "duration-150 ease-out"
+                From: "opacity-0 scale-95"
+                To: "opacity-100 scale-100"
+              Leaving: "duration-100 ease-in"
+                From: "opacity-100 scale-100"
+                To: "opacity-0 scale-95"
+            -->
+            <div class="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+              <div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+                <div class="px-5 pt-4 flex items-center justify-between">
+                  <div>
+                    <img class="h-8 w-auto sm:h-10" src="assets/finance-strategists_logo.png.webp" alt="">
+                  </div>
+                  <div class="-mr-2">
+                    <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-teal-500">
+                      <span class="sr-only">Close menu</span>
+                      <!-- Heroicon name: outline/x -->
+                      <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                  <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Dictionary</a>
+
+                  <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Interviews</a>
+
+                  <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Services</a>
+
+                  <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Videos</a>
+
+                  <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">About Us</a>
+
+                  <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Contact</a>
+                </div>
+                <a href="#" class="block w-full px-5 py-3 text-center font-medium text-teal-600 bg-gray-50 hover:bg-gray-100"> Log in </a>
               </div>
-              <div class="slide" data-slideIndex="2">
-                <div class="slide-banner">Discover relaxation! <a href="#">Buy tickets now.</a></div>
-                <img src="https://via.placeholder.com/1200x600.jpg?text=Sample+Image+3" width="1200" height="600" alt="Sample Image" loading="lazy">
-              </div>
-              <div class="slide" data-slideIndex="3">
-                <div class="slide-banner">See penguins! <a href="#">Buy tickets now.</a></div>
-                <img src="https://via.placeholder.com/1200x600.jpg?text=Sample+Image+4" width="1200" height="600" alt="Sample Image" loading="lazy">
-              </div>
-              <div class="slide" data-slideIndex="4">
-                <div class="slide-banner">Take a ride on the wheel! <a href="#">Buy tickets now.</a></div>
-                <img src="https://via.placeholder.com/1200x600.jpg?text=Sample+Image+5" width="1200" height="600" alt="Sample Image" loading="lazy">
-              </div>
-            </div>
-            <div id="back-button" class="arrow back">←</div>
-            <div id="forward-button" class="arrow forward">→</div>
-            <div class="slide-indicators">
-              <div class="slide-indicator active"></div>
-              <div class="slide-indicator"></div>
-              <div class="slide-indicator"></div>
-              <div class="slide-indicator"></div>
-              <div class="slide-indicator"></div>
             </div>
           </div>
 
-          <h3>Images</h3>
-          <picture>
-              <source media="(max-width: 720px)" width="600" height="300" data-srcset="https://via.placeholder.com/600x300.jpg?text=Source+Media+Max+720" />
-              <source media="(min-width: 721px)" width="600" height="600" data-srcset="https://via.placeholder.com/600x600.jpg?text=Source+Media+Min+721+1x, https://via.placeholder.com/600x600.jpg?text=Source+Media+Min+721+2x 2x, https://via.placeholder.com/600x600.jpg?text=Source+Media+Min+721+3x 3x" />
-              <img class="lazyload" src="https://via.placeholder.com/600x300.jpg?text=Img+Src" width="600" height="300" alt="" loading="lazy" />
-          </picture>
+          <main class="mt-16 sm:mt-24">
+            <div class="mx-auto max-w-7xl">
+              <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+                <div class="px-4 sm:px-6 sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
+                  <div>
+                    <span class="px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-teal-500 rounded-full">Get Top Tier Financial Planning</span>
+                    <h1 class="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:leading-none lg:mt-6 lg:text-5xl xl:text-6xl">
+                      <span class="md:block">Find a Financial Firm in </span>
+                      <span class="text-teal-400 md:block">Los Angeles, CA</span>
+                    </h1>
+                    <p class="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">We did the hard work of finding trustworthy financial advisors in Los Angeles, CA. Our select partner firms meet <a href="#best-financial-firms">the highest standard of excellence and trust</a>.</p>
+                    <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+                      <div class="rounded-md shadow">
+                        <a href="#list-of-firms" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-teal-600 hover:bg-teal-700 md:py-4 md:text-lg md:px-10"> Scroll to List of Firms </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-6 text-base mx-auto max-w-prose lg:max-w-none">
+                    <figure>
+                      <div class="aspect-w-12 aspect-h-7 lg:aspect-none">
+                        <img class="mx-auto rounded-lg shadow-lg object-cover object-center lg:mr-12" src="https://via.placeholder.com/300x500.png?text=Raine+Tamplin" alt="" width="300" height="500">
+                      </div>
+                    </figure>
+                  </div>
+                </div>
+                <div class="mt-16 sm:mt-24 lg:mt-0 lg:col-span-6">
+                  <div class="bg-white sm:max-w-md sm:w-full sm:mx-auto sm:rounded-lg sm:overflow-hidden">
+                    <div class="px-4 py-8 sm:px-10">
 
-          <h3>Videos</h3>
-          <video class="lazyload" controls width="960" height="540" data-poster="https://via.placeholder.com/960x540.png?text=960+Poster" preload="none">
-              <source src="assets/video.mp4" type="video/mp4">
-          </video>
+                      <div class="mt-6">
+                        <h2 class="mt-2 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Get A Custom Financial Plan</h2>
+                        <div class="mt-6 text-gray-500 space-y-6">
+                          <p class="text-lg">After listening to your financial situation and future goals, our advisors will put together a personalized road map for your financial success.</p>
+                        </div>
+                        <form action="#" method="POST" class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+                          <div class="sm:col-span-2">
+                            <label for="full-name" class="block text-sm font-medium text-gray-700">Full name</label>
+                            <div class="mt-1">
+                              <input type="text" name="full-name" id="full-name" autocomplete="name" class="py-3 px-4 block w-full shadow-sm focus:ring-teal-500 focus:border-teal-500 border-gray-300 rounded-md">
+                            </div>
+                          </div>
+                          <div class="sm:col-span-2">
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                            <div class="mt-1">
+                              <input id="email" name="email" type="email" autocomplete="email" class="py-3 px-4 block w-full shadow-sm focus:ring-teal-500 focus:border-teal-500 border-gray-300 rounded-md">
+                            </div>
+                          </div>
+                          <div class="sm:col-span-2">
+                            <label for="phone-number" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                            <div class="mt-1 relative rounded-md shadow-sm">
+                              <input type="text" name="phone-number" id="phone-number" autocomplete="tel" class="py-3 px-4 block w-full focus:ring-teal-500 focus:border-teal-500 border-gray-300 rounded-md" placeholder="">
+                            </div>
+                          </div>
+                          <div class="sm:col-span-2">
+                            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                            <div class="mt-1">
+                              <textarea id="message" name="message" rows="4" class="py-3 px-4 block w-full shadow-sm focus:ring-teal-500 focus:border-teal-500 border border-gray-300 rounded-md"></textarea>
+                            </div>
+                          </div>
+                          <div class="sm:col-span-2">
+                            <button type="submit" class="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500">Contact Us</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+    </header>
 
-          <h3>GIF-Style Videos</h3>
-          <video class="lazyload" autoplay loop muted playsinline width="320" height="240" preload="none">
-              <source src="assets/video.mp4" type="video/mp4">
-          </video>
 
-          <h3>Layouts</h3>
-          <p>A collection of layout patterns built using modern CSS APIs that will help you build common interfaces such as cards, dynamic grid areas, and full-page layouts.</p>
-          <p><strong>Source: <a href="https://web.dev/patterns/layout/">https://web.dev/patterns/layout/</a></strong></p>
-        </section>
+    <main>
+      <section> <!-- https://tailwindui.com/components/marketing/sections/logo-clouds#component-e9f731fb54a4381605a5d05a8da56a2b -->
+        <div class="bg-white">
+          <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+            <p class="text-center text-base font-semibold uppercase text-gray-600 tracking-wider">As Seen In</p>
+            <div class="mt-6 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-6">
+              <div class="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
+                <img class="max-h-12" src="assets/logos_investopedia.png.webp" alt="">
+              </div>
+              <div class="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
+                <img class="max-h-12" src="assets/logos_forbes.png.webp" alt="">
+              </div>
+              <div class="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
+                <img class="max-h-12" src="assets/logos_fox-news.png.webp" alt="">
+              </div>
+              <div class="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
+                <img class="max-h-12" src="assets/logos_nbc.png.webp" alt="">
+              </div>
+              <div class="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
+                <img class="max-h-12" src="assets/logos_cbs.png.webp" alt="">
+              </div>
+              <div class="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
+                <img class="max-h-12" src="https://via.placeholder.com/250x0?text=Additional+Logo" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="best-financial-firms"><!-- https://tailwindui.com/components/marketing/sections/feature-sections#component-cdca7eda27bdaceb45026dca4c17efe7 -->
+        <div class="relative bg-white py-16 sm:py-24 lg:py-32">
+          <div class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+            <p class="text-base font-semibold uppercase tracking-wider text-teal-600">Get Connected To</p>
+            <h2 class="mt-2 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">The Best Financial Advisors in America</h2>
+            <div class="mt-12">
+              <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                <div class="pt-6">
+                  <div class="flow-root rounded-lg bg-gray-50 px-6 pb-8">
+                    <div class="-mt-6">
+                      <div>
+                        <span class="inline-flex items-center justify-center rounded-md bg-teal-500 p-3 shadow-lg">
+                          <!-- Heroicon name: outline/thumb-up -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+                          </svg>
+                        </span>
+                      </div>
+                      <h3 class="mt-8 text-lg font-medium tracking-tight text-gray-900">Trustworthy</h3>
+                      <p class="mt-5 text-base text-gray-500">Our partner firms have no conflicts of interest and no disciplinary history - and they don't sell proprietary investment products.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="pt-6">
+                  <div class="flow-root rounded-lg bg-gray-50 px-6 pb-8">
+                    <div class="-mt-6">
+                      <div>
+                        <span class="inline-flex items-center justify-center rounded-md bg-teal-500 p-3 shadow-lg">
+                          <!-- Heroicon name: outline/badge-check -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                          </svg>
+                        </span>
+                      </div>
+                      <h3 class="mt-8 text-lg font-medium tracking-tight text-gray-900">Accredited</h3>
+                      <p class="mt-5 text-base text-gray-500">All our partner firms are certified CFPs with designations from FINRA and recognized by leading media publications.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="pt-6">
+                  <div class="flow-root rounded-lg bg-gray-50 px-6 pb-8">
+                    <div class="-mt-6">
+                      <div>
+                        <span class="inline-flex items-center justify-center rounded-md bg-teal-500 p-3 shadow-lg">
+                          <!-- Heroicon name: outline/user-group -->
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                          </svg>
+                        </span>
+                      </div>
+                      <h3 class="mt-8 text-lg font-medium tracking-tight text-gray-900">Experienced</h3>
+                      <p class="mt-5 text-base text-gray-500">You will be connected with an advisor from a firm who has been in business for more than 20 years and is registered with the SEC.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="list-of-firms">
+        // MAP LISTING SECTION
+      </section>
+
+      <section> <!-- https://tailwindui.com/components/marketing/sections/content-sections#component-39249d619dcd4a64f3089bf550369572 -->
+        <div class="bg-white overflow-hidden">
+          <div class="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+            <div class="mt-8 lg:grid lg:grid-cols-2 lg:gap-8">
+              <div class="relative lg:row-start-1 lg:col-start-2">
+                <div class="relative text-base mx-auto max-w-prose lg:max-w-none">
+                  <figure>
+                    <div class="aspect-w-12 aspect-h-7 lg:aspect-none">
+                      <img class="mx-auto rounded-lg shadow-lg object-cover object-center" src="https://maps.googleapis.com/maps/api/staticmap?center=Los+Angeles,CA&zoom=13&size=600x600&maptype=roadmap&key=AIzaSyDOZtOVN3sKhrSPo6Nt9GDuk4LoMkoFFxc" alt="Image of Los Angeles, CA" width="500" height="500">
+                    </div>
+                    <figcaption class="mt-3 flex text-sm text-gray-500">
+                      <!-- Heroicon name: solid/camera -->
+                      <svg class="flex-none w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M4 5a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2h-1.586a1 1 0 01-.707-.293l-1.121-1.121A2 2 0 0011.172 3H8.828a2 2 0 00-1.414.586L6.293 4.707A1 1 0 015.586 5H4zm6 9a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
+                      </svg>
+                      <span class="ml-2">Image from Google Maps</span>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div class="mt-8 lg:mt-0">
+                <h2 class="text-3xl text-gray-900 font-extrabold tracking-tight sm:text-4xl">About Los Angeles, CA</h2>
+                <div class="mt-6 text-gray-500 space-y-6">
+                  <p class="text-lg">Los Angeles, CA is a large city located in southern California. Some of the city's most famous landmarks include the Hollywood sign, the Hollywood Walk of Fame, and Rodeo Drive. The city is also home to many major businesses and employers, including Warner Bros., NBCUniversal, and Disney. Los Angeles is served by several major highways, including Interstate 10 and Highway 101. The city is divided into several neighborhoods, including Hollywood, West Hollywood, and Beverly Hills.</p>
+                </div>
+                <div class="mt-6 text-gray-500 grid grid-cols-2 gap-6">
+                  <div>
+                    <h3 class="text-base font-semibold uppercase tracking-wider text-teal-600">Related Services</h3>
+                    <ul><li><a href="/services/banks/los-angeles-ca/">Banks</a></li><li><a href="/services/estate-planning-lawyer/los-angeles-ca/">Estate Planning Lawyer</a></li><li><a href="/services/insurance-broker/los-angeles-ca/">Insurance Broker</a></li><li><a href="/services/mortgage-loan-officer/los-angeles-ca/">Mortgage Loan Officer</a></li><li><a href="/services/retirement-planning/los-angeles-ca/">Retirement Planning</a></li><li><a href="/services/tax-accountant/los-angeles-ca/">Tax Accountant</a></li><li><a href="/services/wealth-management/los-angeles-ca/">Wealth Management</a></li></ul>
+                  </div>
+                  <div>
+                    <h3 class="text-base font-semibold uppercase tracking-wider text-teal-600">Nearby Locations</h3>
+                    <ul><li><a href="/services/advisor/los-angeles-ca/">Los Angeles, CA</a></li><li><a href="/services/advisor/los-angeles-county-ca/">Los Angeles County, CA</a></li><li><a href="/services/advisor/dtla/">DTLA, CA</a></li><li><a href="/services/advisor/glendale-ca/">Glendale, CA</a></li><li><a href="/services/advisor/beverly-hills-ca/">Beverly Hills, CA</a></li></ul>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <section><!-- https://tailwindui.com/components/marketing/sections/faq-sections#component-8699d80b13ef524eb573e54b4d4b89d1 -->
+        <div class="bg-gray-50">
+          <div class="max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto divide-y-2 divide-gray-200">
+              <h2 class="text-center text-3xl font-extrabold text-gray-900 sm:text-4xl">Frequently Asked Questions</h2>
+              <dl class="mt-6 space-y-6 divide-y divide-gray-200">
+                <div class="pt-6">
+                  <dt class="text-lg">
+                    <!-- Expand/collapse question button -->
+                    <button type="button" class="text-left w-full flex justify-between items-start text-gray-400" aria-controls="faq-0" aria-expanded="false">
+                      <span class="font-medium text-gray-900"> What questions should I ask a financial advisor? </span>
+                      <span class="ml-6 h-7 flex items-center">
+                        <!--
+                          Expand/collapse icon, toggle classes based on question open state.
+
+                          Heroicon name: outline/chevron-down
+
+                          Open: "-rotate-180", Closed: "rotate-0"
+                        -->
+                        <svg class="rotate-0 h-6 w-6 transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </span>
+                    </button>
+                  </dt>
+                  <dd class="mt-2 pr-12" id="faq-0">
+                    <p class="text-base text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.</p>
+                  </dd>
+                </div>
+
+                <div class="pt-6">
+                  <dt class="text-lg">
+                    <!-- Expand/collapse question button -->
+                    <button type="button" class="text-left w-full flex justify-between items-start text-gray-400" aria-controls="faq-0" aria-expanded="false">
+                      <span class="font-medium text-gray-900"> How much does a financial advisor cost in Los Angeles, CA? </span>
+                      <span class="ml-6 h-7 flex items-center">
+                        <!--
+                          Expand/collapse icon, toggle classes based on question open state.
+
+                          Heroicon name: outline/chevron-down
+
+                          Open: "-rotate-180", Closed: "rotate-0"
+                        -->
+                        <svg class="rotate-0 h-6 w-6 transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </span>
+                    </button>
+                  </dt>
+                  <dd class="mt-2 pr-12" id="faq-0">
+                    <p class="text-base text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.</p>
+                  </dd>
+                </div>
+
+                <div class="pt-6">
+                  <dt class="text-lg">
+                    <!-- Expand/collapse question button -->
+                    <button type="button" class="text-left w-full flex justify-between items-start text-gray-400" aria-controls="faq-0" aria-expanded="false">
+                      <span class="font-medium text-gray-900"> How do I choose a financial advisor in Los Angeles County? </span>
+                      <span class="ml-6 h-7 flex items-center">
+                        <!--
+                          Expand/collapse icon, toggle classes based on question open state.
+
+                          Heroicon name: outline/chevron-down
+
+                          Open: "-rotate-180", Closed: "rotate-0"
+                        -->
+                        <svg class="rotate-0 h-6 w-6 transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </span>
+                    </button>
+                  </dt>
+                  <dd class="mt-2 pr-12" id="faq-0">
+                    <p class="text-base text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.</p>
+                  </dd>
+                </div>
+
+                <!-- More questions... -->
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <footer aria-label="Footer">
-        <nav aria-label="Footer Menu">
-            <ul>
-                <li><a href="#">Nav Link 1</a></li>
-                <li><a href="#">Nav Link 2</a></li>
-                <li><a href="#">Nav Link 3</a></li>
-            </ul>
+    <footer class="bg-white" aria-label="Footer"><!-- https://tailwindui.com/components/marketing/sections/footers#component-8fd8a490ec2fae888154eb83685bbe23 -->
+      <div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
+        <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
+          <div class="px-5 py-2">
+            <a href="#" class="text-base text-gray-500 hover:text-gray-900"> Contact Us </a>
+          </div>
+
+          <div class="px-5 py-2">
+            <a href="#" class="text-base text-gray-500 hover:text-gray-900"> Privacy Policy </a>
+          </div>
+
+          <div class="px-5 py-2">
+            <a href="#" class="text-base text-gray-500 hover:text-gray-900"> Terms of Use </a>
+          </div>
+
+          <div class="px-5 py-2">
+            <a href="#" class="text-base text-gray-500 hover:text-gray-900"> Sitemap </a>
+          </div>
         </nav>
-        <p><small>&copy; 2021</small></p>
+        <div class="mt-8 flex justify-center space-x-6">
+          <a href="https://www.facebook.com/FinanceStrategists/" class="text-gray-400 hover:text-gray-500">
+            <span class="sr-only">Facebook</span>
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/financestrategists/" class="text-gray-400 hover:text-gray-500">
+            <span class="sr-only">Instagram</span>
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" />
+            </svg>
+          </a>
+          <a href="https://twitter.com/FinStrategists" class="text-gray-400 hover:text-gray-500">
+            <span class="sr-only">Twitter</span>
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+            </svg>
+          </a>
+          <a href="https://www.youtube.com/channel/UCqScqlMRSeoHXRigrf0WxLg" class="text-gray-400 hover:text-gray-500">
+            <span class="sr-only">YouTube</span>
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/company/finance-strategists/" class="text-gray-400 hover:text-gray-500">
+            <span class="sr-only">LinkedIn</span>
+            <svg class="w-6 h-6 text-blue-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+              <path
+                d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+        <p class="mt-8 text-center text-base text-gray-400">&copy; 2022 Finance Strategists. All rights reserved.</p>
+      </div>
     </footer>
 
 </body>
