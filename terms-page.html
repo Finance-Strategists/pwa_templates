@@ -1,0 +1,766 @@
+<!doctype html>
+<!-- https://validator.w3.org/nu/?doc=https%3A%2F%2Fweb-vitals-starter-templates.pages.dev&showoutline=yes -->
+<html lang="en-US">
+
+<head>
+  <!-- INITIAL META -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{TITLE}}}}</title>
+  <meta name="description" content="{{META_DESCRIPTION}}">
+
+  <!-- PRELOAD: we know the exact url of the source -->
+  <link rel="preload" href="assets/finance-strategists_logo.png.webp" as="image" type="image/webp" importance="high">
+
+  <!-- PRECONNECT: we know the exact domain will be used -->
+  <!-- Google Tag Manager -->
+  <link rel="preconnect" href="https://www.googletagmanager.com" importance="high" crossorigin>
+
+  <!-- DNS-PREFETCH: we know the exact domain *may* be used -->
+  <!-- Google Maps -->
+  <link rel="dns-prefetch" href="https://maps.google.com" importance="low" crossorigin>
+  <link rel="dns-prefetch" href="https://maps.googleapis.com" importance="low" crossorigin>
+
+  <!-- CRITICAL CSS: includes only css used in the initial viewport -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="dist/output.css" rel="stylesheet">
+  <style>
+    html {
+      /* overflow-y: overlay; -- this is commented out due to overflow issues that occur// scrollbar is on top of the body*/
+      /* prevents cls caused by the scrollbar */
+      scroll-behavior: smooth;
+      /* smooth scrolling to in-page anchors */
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <header class="bg-gray-800">
+    <!-- https://tailwindui.com/components/marketing/sections/heroes#component-c2665b7bbef783e2d6683ad7e2075e10 -->
+    <div class="relative overflow-hidden max-w-7xl mx-auto">
+      <div class="relative pt-6 pb-16 sm:pb-24">
+        <div>
+          <nav class="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6" aria-label="Global">
+            <div class="flex items-center flex-1">
+              <div class="flex items-center justify-between w-full md:w-auto">
+                <a href="#">
+                  <span class="sr-only">Finance Strategists</span>
+                  <img class="h-8 w-auto sm:h-10" src="assets/finance-strategists_logo_white.png" alt="">
+                </a>
+                <div class="-mr-2 flex items-center md:hidden">
+                  <button type="button" class="bg-gray-800 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-700 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <!-- Heroicon name: outline/menu -->
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="grow place-content-end hidden space-x-10 md:flex md:ml-10">
+                <a href="#" class="font-medium text-white hover:text-gray-300">Dictionary</a>
+
+                <a href="#" class="font-medium text-white hover:text-gray-300">Interviews</a>
+
+                <a href="#" class="font-medium text-white hover:text-gray-300">Services</a>
+
+                <a href="#" class="font-medium text-white hover:text-gray-300">Videos</a>
+
+                <a href="#" class="font-medium text-white hover:text-gray-300">About Us</a>
+
+                <a href="#" class="font-medium text-white hover:text-gray-300">Contact</a>
+              </div>
+            </div>
+          </nav>
+
+          <!--
+              Mobile menu, show/hide based on menu open state.
+
+              Entering: "duration-150 ease-out"
+                From: "opacity-0 scale-95"
+                To: "opacity-100 scale-100"
+              Leaving: "duration-100 ease-in"
+                From: "opacity-100 scale-100"
+                To: "opacity-0 scale-95"
+            -->
+          <div class="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right hidden">
+            <div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+              <div class="px-5 pt-4 flex items-center justify-between">
+                <div>
+                  <img class="h-8 w-auto sm:h-10" src="assets/finance-strategists_logo.png.webp" alt="">
+                </div>
+                <div class="-mr-2">
+                  <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-teal-500">
+                    <span class="sr-only">Close menu</span>
+                    <!-- Heroicon name: outline/x -->
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Dictionary</a>
+
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Interviews</a>
+
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Services</a>
+
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Videos</a>
+
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">About Us</a>
+
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Contact</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <main class="mt-16 sm:mt-24">
+          <div class="mx-auto max-w-7xl">
+            <div class="text-center">
+
+              <div class="breadcrumbs px-5 py-2.5 text-white text-s font-semibold" typeof="BreadcrumbList" vocab="https://schema.org/">
+                <span property="itemListElement" typeof="ListItem">
+                  <a property="item" typeof="WebPage" title="Go to {{Home}}." href="/" class="home underline"><span property="name">Home</span></a>
+                  <meta property="position" content="1">
+                </span>
+                <span>&nbsp;&raquo;&nbsp;</span>
+                <span property="itemListElement" typeof="ListItem">
+                  <a property="item" typeof="WebPage" title="Go to {{Founder Spotlight}}." href="/about-us/" class="underline"><span property="name">Founders Spotlight</span></a>
+                  <meta property="position" content="2">
+                </span>
+                <span>&nbsp;&raquo;&nbsp;</span>
+                <span property="itemListElement" typeof="ListItem">
+                  <span property="name" class="current-item font-normal">Nate Smith, MPAcc, CPA</span>
+                  <meta property="url" content="https://learn.financestrategists.com/finance-terms/cogs/">
+                  <meta property="position" content="3">
+                </span>
+              </div>
+
+              <h1 class="flex flex-wrap gap-x-4 justify-center mt-4 tracking-tight text-white">
+                <h1 class="text-4xl sm:mt-5 sm:leading-none lg:mt-6 lg:text-5xl xl:text-6xl font-extrabold text-white mb-4">
+                  <span class="md:block">What is a Chartered Financial Analyst (CFA)?</span>
+                </h1>
+                <span class="text-white md:block mb-2.5 mt-7">*Written By Section</span>
+              </h1>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </header>
+
+  <main class="mt-6">
+    <section class="">
+      <!-- 3 column wrapper -->
+      <div class="flex-grow w-full max-w-8xl mx-auto xl:pb-16 xl:pt-8 lg:flex max-w-7xl mx-auto">
+        <!-- Left sidebar & main wrapper -->
+        <div class="flex-1 min-w-0 bg-white xl:flex xl:pl-4">
+          <div class="bg-white border-gray-200 xl:border-b-0 xl:flex-shrink-0 xl:w-64">
+            <div class="h-full pl-4 pr-6 pb-6 sm:pl-6 lg:pl-8 xl:pl-0">
+              <!-- Start left column area -->
+              <div class="h-full relative">
+                <div class="border-b-2">
+
+                  <!-- component -->
+                  <!-- Modified TOC -->
+                  <div class="">
+                    <div id="toc-accordion" data-accordion="collapse" data-active-classes="bg-white text-sky-900" data-inactive-classes="text-sky-900">
+                      <h2 id="toc-accordion-heading-1">
+                        <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left border-gray-200 dark:border-gray-700 bg-white text-gray-900" data-accordion-target="#toc-accordion-body-1" aria-expanded="true" aria-controls="toc-accordion-body-1">
+                          <span class="text-xl text-sky-900 font-bold tracking-tight">Table of Contents</span>
+                          <svg data-accordion-icon="" class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                        </button>
+                      </h2>
+                      <div id="toc-accordion-body-1" class="" aria-labelledby="toc-accordion-heading-1">
+                        <div class="font-light border-gray-200 dark:border-gray-700">
+                          <nav class="pb-6 space-y-1" aria-label="Table of Contents">
+                            <!-- Current: "bg-gray-100 text-gray-900", Default: "text-gray-600 hover:bg-gray-50 hover:text-gray-900" -->
+                            <a href="#" class="bg-gray-100 text-teal-600 flex items-center px-3 py-2 text-sm font-medium rounded-md" aria-current="page">
+                              <span class="truncate">What is a Chartered Financial Analyst (CFA)?</span>
+                            </a>
+
+                            <a href="#" class="text-teal-600 hover:bg-gray-50 hover:text-sky-900 flex items-center px-3 py-2 text-sm font-medium rounded-md">
+                              <span class="truncate">What Are the Duties of a Chartered Financial Analyst?</span>
+                            </a>
+
+                            <a href="#" class="text-teal-600 hover:bg-gray-50 hover:text-sky-900 flex items-center px-3 py-2 text-sm font-medium rounded-md">
+                              <span class="truncate">How to Get a CFA Certification</span>
+                            </a>
+                            <a href="#" class="text-teal-600 hover:bg-gray-50 hover:text-sky-900 flex items-center px-3 py-2 text-sm font-medium rounded-md">
+                              <span class="truncate">What Are the Benefits of CFA Designation?</span>
+                            </a>
+
+                            <a href="#" class="text-teal-600 hover:bg-gray-50 hover:text-sky-900 flex items-center px-3 py-2 text-sm font-medium rounded-md">
+                              <span class="truncate">A Brief Histoy of CFA</span>
+                            </a>
+
+                            <a href="#" class="text-teal-600 hover:bg-gray-50 hover:text-sky-900 flex items-center px-3 py-2 text-sm font-medium rounded-md">
+                              <span class="truncate">Chartered Financial Analyst (CFA) FAQs</span>
+                            </a>
+                          </nav>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- TOC FIX END -->
+
+                  <script src="https://unpkg.com/flowbite@1.3.3/dist/flowbite.js"></script>
+                  <!-- do we need to integrate flowbite.js, or do we have another method? -->
+                </div>
+                
+                <div class="flex flex-wrap justify-center">
+                  <!-- VIDEOS -- 2nd module on the left -->
+                  <div class="pl-3 pr-3 pb-10 border-b-2 flex-grow justify-center flex sm:flex-nowrap">
+                    <div class="min-w-[232px]">
+                      <h2 class="pb-4 pt-6 text-xl text-sky-900 font-bold tracking-tight">Videos</h2>
+                      <nav class="space-y-1 text-gray-500 pb-6">
+                        <a class="hover:text-sky-900 flex items-center py-2 text-sm font-medium" href="#">What is the Wash Sale Rule?</a>
+                        <a class="hover:text-sky-900 flex items-center py-2 text-sm font-medium" href="#">DuPont Analysis Definition and Formula</a>
+                        <a class="hover:text-sky-900 flex items-center py-2 text-sm font-medium" href="#">Net Income Definition and Formula</a>
+                        <a class="hover:text-sky-900 flex items-center py-2 text-sm font-medium" href="#">Cash flow Statement Definition</a>
+                        <a class="hover:text-sky-900 flex items-center py-2 text-sm font-medium" href="#">Leverage Ratios Definition</a>
+                      </nav>
+                      <button class="w-full bg-transparent bg-teal-600 hover:text-teal-600 border-teal-600 font-semibold text-white py-2 px-4 hover:border-current hover:bg-transparent border-2 rounded-md">
+                        <span>View all Videos</span>
+                      </button>
+                    </div>
+                  </div>
+                  <!-- Finance Word of the Day -- 3nd module on the left -->
+                  <div class="pl-3 pr-3 pb-10 border-b-2 flex-grow justify-center flex sm:flex-nowrap">
+                    <div class="min-w-[232px]">
+                      <h2 class="pb-4 pt-6 text-xl text-sky-900 font-bold tracking-tight">Receive the Finance Word of the Day</h2>
+                      <p class="text-gray-500 flex items-center py-4 text-sm font-medium">Fill out your information to receive the Finance Word of the Day.</p>
+                      <div class="pb-6">
+                        <div>
+                          <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                          <input type="text" id="first_name" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="First Name" required>
+                        </div>
+                        <div>
+                            <label for="email_address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+                            <input type="text" id="email_address" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Email Address" required>
+                        </div>
+                      </div>
+                      <button class="w-full bg-transparent bg-teal-600 hover:text-teal-600 border-teal-600 font-semibold text-white py-2 px-4 hover:border-current hover:bg-transparent border-2 rounded-md">
+                        <span>Subscribe</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End left column area -->
+            </div>
+          </div>
+
+          <div class="bg-white lg:min-w-[800px] lg:flex-1 xl:border-l xl:border-gray-200">
+            <div class="h-full pb-6 px-4 sm:px-6 lg:px-16 max-w-5xl mx-auto">
+
+              <!-- Start main area-->
+              <div class="relative h-full">
+                <div class="">
+                  <article class="">
+                    <section class="">
+                      <div class="pb-8  pt-8">
+                        <h2 class="pb-6 text-2xl text-sky-900 font-bold tracking-tight">What Is a Chartered Financial Analyst (CFA)?</h2>
+                        <p class="mb-6 text-gray-500 text-md">Chartered Financial Analyst (CFA) is a designation for <a class="text-teal-600 hover:text-sky-900 font-bold" data-mil="1385" href="https://learn.financestrategists.com/finance-terms/investments/">investment</a> and finance professionals that certifies their expertise across a wide range of finance- and investment-related topics.</p>
+                        <p class="mb-6 text-gray-500 text-md">The designation is awarded by the CFA Institute.</p>
+                        <p class="mb-6 text-gray-500 text-md">An individual who has gone through and passed the institute’s rigorous program for certification is said to be a CFA charterholder.</p>
+                        <p class="mb-6 text-gray-500 text-md">The CFA designation boosts career prospects and results in tangible <a class="text-teal-600 hover:text-sky-900 font-bold" data-mil="1385" href="https://learn.financestrategists.com/finance-terms/gains-term-definition/">gains</a>, such as higher salaries, for charterholders.</p>
+                        <p class="mb-6 text-gray-500 text-md">CFA charterholders can pick from a broad array as far as choice of career is concerned.</p>
+                        <p class="mb-6 text-gray-500 text-md">They can work in various sectors of finance, from banking to <a class="text-teal-600 hover:text-sky-900 font-bold" data-mil="1385" href="https://learn.financestrategists.com/finance-terms/investment-management/">investment management</a> to corporate mergers, as well as in different industries, such as technology and arts.</p>
+                      </div>
+                    </section>
+
+                    <section class="">
+                      <div class="pb-8">
+                        <h2 class="pb-6 text-2xl text-sky-900 font-bold tracking-tight">What Are the Duties of a Chartered Financial Analyst?</h2>
+                        <p class="mb-6 text-gray-500 text-md">A CFA designation covers all aspects of the finance industry. Hence, CFAs are most closely-associated with the banking and investment industry.</p>
+                        <p class="mb-6 text-gray-500 text-md">Their roster of duties may consist of <a class="text-teal-600 hover:text-sky-900 font-bold" data-mil="1385" href="https://learn.financestrategists.com/finance-terms/equity/">equity</a> analysis, ensuring legal and regulatory compliance, risk management, and managing a portfolio of <a class="text-teal-600 hover:text-sky-900 font-bold" data-mil="1385" href="https://learn.financestrategists.com/finance-terms/assets/">assets</a>.</p>
+                        <p class="mb-6 text-gray-500 text-md">A typical career path for an analyst may start in a junior financial analyst position and culminate in either becoming a CEO or managing a large portfolio of <a class="text-teal-600 hover:text-sky-900 font-bold" data-mil="1385" href="https://learn.financestrategists.com/finance-terms/stock/">stocks</a> and other assets.</p>
+                        <p class="mb-6 text-gray-500 text-md">They can also function as accountants or auditors, responsible for checking <a class="text-teal-600 hover:text-sky-900 font-bold" data-mil="1385" href="https://learn.financestrategists.com/explanation/introduction-to-accounting/what-is-accounting/">accounting</a> books and making sure they are in compliance with existing regulation.</p>
+                        <p class="mb-6 text-gray-500 text-md">Because finance is a pervasive function across all industries, a CFA’s job prospects are not limited to the industries above.</p>
+                        <p class="mb-6 text-gray-500 text-md">They can also find employment in other industries.</p>
+                        <p class="mb-6 text-gray-500 text-md">For example, they can work as a journalist covering <a class="text-teal-600 hover:text-sky-900 font-bold" data-mil="1385" href="https://learn.financestrategists.com/finance-terms/business/">business</a> news because they understand the arcane and complex world of banking and investment.</p>
+                        <p class="mb-6 text-gray-500 text-md">CFA charterholders who demonstrate excellent people management and leadership skills can also move through the ranks to become CEOs of their respective organizations.</p>
+                      </div>
+                    </section>
+
+                    <section class="">
+                      <div class="pb-8">
+                        <h2 class="pb-6 text-2xl text-sky-900 font-bold tracking-tight">How to Get a CFA Certification</h2>
+                        <p class="mb-6 text-gray-500 text-md">Becoming a CFA charterholder requires intensive study and is expensive.</p>
+                        <p class="mb-6 text-gray-500 text-md">According to various estimates, it can take approximately 250 hours to 300 hours of preparation per year and <a class="text-teal-600 hover:text-sky-900 font-bold" data-mil="1385" href="https://learn.financestrategists.com/explanation/cost-accounting/what-is-cost-and-its-types/">cost</a> anywhere between $2500 to $8500.</p>
+                        <p class="mb-6 text-gray-500 text-md">Candidates aspiring to become a CFA charterholder must fulfill either one of the three eligibility requirements to be eligible for the exams.</p>
+                        <p class="mb-6 text-gray-500 text-md">They must either have an undergraduate bachelor’s degree or must be in the final year of their degree.</p>
+                        <p class="mb-6 text-gray-500 text-md">Alternately, they must have four years of professional work experience.</p>
+                        <p class="mb-6 text-gray-500 text-md">According to a factsheet on the CFA website, it takes four or more years to complete the entire program. 
+                        </p>
+                        <p class="mb-6 text-gray-500 text-md">Since it offers a comprehensive perspective of the finance industry, the CFA exam tests candidates on a broad range of topics.</p>
+                        <p class="mb-6 text-gray-500 text-md">Aspiring CFAs are expected to study from the Candidate Body of Knowledge (CBOK).
+                        </p>
+                        <p class="mb-6 text-gray-500 text-md">The areas of study for CFA include ethical and professional standards, quantitative methods, economics, <a class="text-teal-600 hover:text-sky-900 font-bold" data-mil="1385" href="https://learn.financestrategists.com/explanation/management-accounting/financial-reporting/">financial reporting</a> and analysis, equity investments, <a class="text-teal-600 hover:text-sky-900 font-bold" data-mil="1385" href="https://learn.financestrategists.com/finance-terms/fixed-income/">fixed income</a> etc.</p>
+                        <p class="mb-6 text-gray-500 text-md">There are three parts or levels to the CFA exam.</p>
+                        <p class="mb-6 text-gray-500 text-md">The Level I exam is conducted four times a year in February, May, August, and November.</p>
+                        <p class="mb-6 text-gray-500 text-md">Up until now, it was conducted in a paper-based format across various locations around the world.</p>
+                        <p class="mb-6 text-gray-500 text-md">Starting 2021, CFA exams will be offered in computer formats in two sessions, each with a duration of two hours and fifteen minutes.</p>
+                        <p class="mb-6 text-gray-500 text-md">The number of questions per exam has also been reduced to 180 questions from the current 240 questions.</p>
+                        <p class="mb-6 text-gray-500 text-md">Levels II and III are both conducted in June and are available in 250 cities.</p>
+                        <p class="mb-6 text-gray-500 text-md">While Level I and Level II are entirely multiple-choice, Level III also has an essay question.</p>
+                        <p class="mb-6 text-gray-500 text-md">Both Level II and Level III have a duration of six hours in their paper-based format.</p>
+                        <p class="mb-6 text-gray-500 text-md">Like Level I, both will also move to an entirely computer-based format in 2021 and their duration will become 4.5 hours.</p>
+                        <p class="mb-6 text-gray-500 text-md">To become a charterholder, candidates must pass each exam in sequence i.e., they must successfully complete Level I in order to qualify for Level II and so on.</p>
+                        <p class="mb-6 text-gray-500 text-md"></p>
+                        <p class="mb-6 text-gray-500 text-md"></p>
+                        <p class="mb-6 text-gray-500 text-md"></p>
+                        <p class="mb-6 text-gray-500 text-md"></p>
+                      </div>
+                    </section>
+
+                    <section class="">
+                      <div class="pb-8">
+                        <h2 class="pb-6 text-2xl text-sky-900 font-bold tracking-tight">What Are the Benefits of CFA Designation</h2>
+                        <p class="mb-6 text-gray-500 text-md">A CFA designation is a much sought-after title and confers substantial benefits to its holders.</p>
+                        <p class="mb-6 text-gray-500 text-md">Because passing the exam requires rigor and breadth of expertise across multiple topics, CFA charterholders are considered disciplined and bright.</p>
+                        <p class="mb-6 text-gray-500 text-md">A charterholder is likely to receive a career bump once he or she passes the eligibility exam.</p>
+                        <p class="mb-6 text-gray-500 text-md">CFAs are also generously paid.</p>
+                        <p class="mb-6 text-gray-500 text-md">Depending on their position in the company hierarchy and years of experience, CFAs can earn as much as $344,000.</p>
+                        <p class="mb-6 text-gray-500 text-md">The starting salary for a financial analyst is around $80,000, which is not a shabby figure for someone who may be just out of college.</p>
+                        <p class="mb-6 text-gray-500 text-md">Another added benefit of the CFA designation is the opportunity to work across industries.</p>
+                        <p class="mb-6 text-gray-500 text-md">As mentioned earlier, the finance department is an essential component of all companies.</p>
+                        <p class="mb-6 text-gray-500 text-md">In that sense, a CFA is a generalist who can work and custom craft their job function to the industry that they work in.</p>
+                        <p class="mb-6 text-gray-500 text-md">For example, a CFA charterholder’s career may start in investment banking and progress onto technology where, after several years of getting to know the business, they may start their own company or lead an organization.</p>
+                      </div>
+                    </section>
+
+                    <section class="">
+                      <div class="pb-8">
+                        <h2 class="pb-6 text-2xl text-sky-900 font-bold tracking-tight">A Brief History of CFA</h2>
+                        <p class="mb-6 text-gray-500 text-md">The National Federation of Financial Analysts Societies (NFFAS) is considered a precursor to the current CFA institute.</p>
+                        <p class="mb-6 text-gray-500 text-md">It was founded in 1947 by representatives from 11 analyst societies in Boston, Chicago, New York, and Philadelphia.</p>
+                        <p class="mb-6 text-gray-500 text-md">That time coincided with a greater awareness of the importance of managing money.</p>
+                        <p class="mb-6 text-gray-500 text-md">Benjamin Graham had already published his famous tomes – The Intelligent Investor and Security Analyst – and the nation was in the beginning years of a postwar prosperity boom.</p>
+                        <p class="mb-6 text-gray-500 text-md">Analysts had refined the techniques used by newspaper journalists, who covered business, established a discipline.</p>
+                        <p class="mb-6 text-gray-500 text-md">But their profession was still considered on the <a data-mil="1385" href="https://learn.financestrategists.com/finance-terms/margin/">margins</a> of mainstream society and did not have the recognition of, say, a physician or an engineer.</p>
+                        <p class="mb-6 text-gray-500 text-md">One of the tasks of the analyst societies that came together to form NFFAS was to provide education and training to members.</p>
+                        <p class="mb-6 text-gray-500 text-md">As a start, they began offering evening classes at Northeastern University. Graham had already suggested a designation for qualified analysts, called “Quantified Security Analyst”.</p>
+                        <p class="mb-6 text-gray-500 text-md">In 1953, NFFAS commenced the process of defining expectations and course content for charter holders.</p>
+                        <p class="mb-6 text-gray-500 text-md">Members of the Chicago Society came up with the idea to test analysts in a three-stage series of eight exams.</p>
+                        <p class="mb-6 text-gray-500 text-md">A. Moyer Kulp, a senior vice president of Wellington Management, in Philadelphia is credited with setting the guidelines for CFA charterholders.</p>
+                        <p class="mb-6 text-gray-500 text-md">The Institute of Chartered Financial Analyst (ICFA) awarded its first CFA charter to George Hansen of Boston in 1963.</p>
+                      </div>
+                    </section>
+
+                    <!-- Dropdown Accordion -->
+                    <section class="">
+                      <div class="pb-8">
+                        <h2 class="pb-6 text-2xl text-sky-900 font-bold tracking-tight">Chartered Financial Analyst (CFA) FAQs</h2>
+                        <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-white text-gray-900" data-inactive-classes="text-gray-500 dark:text-gray-400">
+
+                          <h3 id="accordion-flush-heading-1">
+                            <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left border-t-2 bg-white text-gray-900" data-accordion-target="#accordion-flush-body-1" aria-expanded="true" aria-controls="accordion-flush-body-1">
+                              <span>What does CFA stand for?</span>
+                              <svg data-accordion-icon="" class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                            </button>
+                          </h3>
+                          <div id="accordion-flush-body-1" class="" aria-labelledby="accordion-flush-heading-1">
+                            <div class="py-5 font-light border-b border-gray-200 dark:border-gray-700">
+                              <p class="mb-2 text-gray-500 dark:text-gray-400">CFA stands for Chartered Financial Analyst, which is the designation that most portfolio managers either have or try to obtain.</p>
+                            </div>
+                          </div>
+
+                          <h3 id="accordion-flush-heading-2">
+                            <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-2" aria-expanded="false" aria-controls="accordion-flush-body-2">
+                              <span>What is a Chartered Financial Analyst?</span>
+                              <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                            </button>
+                          </h3>
+                          <div id="accordion-flush-body-2" class="hidden" aria-labelledby="accordion-flush-heading-2">
+                            <div class="py-5 font-light border-b border-gray-200 dark:border-gray-700">
+                              <p class="mb-2 text-gray-500 dark:text-gray-400">Text</p>
+                            </div>
+                          </div>
+
+                          <h3 id="accordion-flush-heading-3">
+                            <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-3" aria-expanded="false" aria-controls="accordion-flush-body-3">
+                              <span>Text</span>
+                              <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                            </button>
+                          </h3>
+                          <div id="accordion-flush-body-3" class="hidden" aria-labelledby="accordion-flush-heading-3">
+                            <div class="py-5 font-light border-b border-gray-200 dark:border-gray-700">
+                              <p class="mb-2 text-gray-500 dark:text-gray-400">Text</p>
+                            </div>
+                          </div>
+
+                          <h3 id="accordion-flush-heading-4">
+                            <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-4" aria-expanded="false" aria-controls="accordion-flush-body-4">
+                              <span>Text</span>
+                              <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                            </button>
+                          </h3>
+                          <div id="accordion-flush-body-4" class="hidden" aria-labelledby="accordion-flush-heading-4">
+                            <div class="py-5 font-light border-b border-gray-200 dark:border-gray-700">
+                              <p class="mb-2 text-gray-500 dark:text-gray-400">Text</p>
+                            </div>
+                          </div>
+
+                          <h3 id="accordion-flush-heading-5">
+                            <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-5" aria-expanded="false" aria-controls="accordion-flush-body-5">
+                              <span>Text</span>
+                              <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                            </button>
+                          </h3>
+                          <div id="accordion-flush-body-5" class="hidden" aria-labelledby="accordion-flush-heading-5">
+                            <div class="py-5 font-light border-b border-gray-200 dark:border-gray-700">
+                              <p class="mb-2 text-gray-500 dark:text-gray-400">Text</p>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </section>
+
+                  </article>
+                  
+                </div>
+              </div>
+              <!-- End main area -->
+            </div>
+          </div>
+        </div>
+
+        <div class="pr-4 sm:pr-6 lg:pr-8 lg:flex-shrink-0 xl:pr-4">
+          <div class="h-full pl-6 pb-6 lg:w-60">
+            <!-- Start right column area -->
+            <div class="h-full relative">
+              <div class="pb-6 text-xl text-sky-900 font-bold tracking-tight">Our Services</h2>
+                <!-- This example requires Tailwind CSS v2.0+ -->
+                <nav class="space-y-1 text-gray-500 pb-6 border-b-2" aria-label="Our Services">
+                  <!-- Current: "bg-gray-100 text-gray-900", Default: "text-gray-600 hover:bg-gray-50 hover:text-gray-900" -->
+                  <a href="#" class="hover:text-sky-900 flex items-center py-2 text-sm font-medium" aria-current="page">
+                    <span class="truncate">Financial Advisor</span>
+                  </a>
+
+                  <a href="#" class="hover:text-sky-900 flex items-center py-2 text-sm font-medium">
+                    <span class="truncate">Banks</span>
+                  </a>
+
+                  <a href="#" class="hover:text-sky-900 flex items-center py-2 text-sm font-medium">
+                    <span class="truncate">Estate Planning Lawyer</span>
+                  </a>
+
+                  <a href="#" class="hover:text-sky-900 flex items-center py-2 text-sm font-medium" aria-current="page">
+                    <span class="truncate">Insurance Broker</span>
+                  </a>
+
+                  <a href="#" class="hover:text-sky-900 flex items-center py-2 text-sm font-medium">
+                    <span class="truncate">Morgage Loan Officer</span>
+                  </a>
+
+                  <a href="#" class="hover:text-sky-900 flex items-center py-2 text-sm font-medium">
+                    <span class="truncate">Retirement Planning</span>
+                  </a>
+
+                  <a href="#" class="hover:text-sky-900 flex items-center py-2 text-sm font-medium" aria-current="page">
+                    <span class="truncate">Tax Accountant</span>
+                  </a>
+
+                  <a href="#" class="hover:text-sky-900 flex items-center py-2 text-sm font-medium">
+                    <span class="truncate">Wealth  Management</span>
+                  </a>
+                </nav>
+
+                <div class="pt-6 pb-2 text-xl text-sky-900 font-bold tracking-tight">Learn the Basics of Accounting for Free</h2>
+                  <!-- components are enclosed in div -->
+                  <div>
+                    <h3 class="pt-6 text-l text-sky-900 font-bold tracking-tight">Financial Accounting</h3>
+                    <!-- This example requires Tailwind CSS v2.0+ -->
+                    <nav class="space-y-1 text-gray-500 py-4 border-b-2" aria-label="Financial Accounting">
+                      <!-- Current: "bg-gray-100 text-gray-900", Default: "text-gray-600 hover:bg-gray-50 hover:text-gray-900" -->
+                      <a href="#" class="hover:text-sky-900 flex items-center py-2 text-sm font-medium" aria-current="page">
+                        <span class="truncate">Accounting Concepts &amp; Principles</span>
+                      </a>
+
+                      <a href="#" class="hover:text-sky-900 flex items-center py-2 text-sm font-medium">
+                        <span class="truncate">Accounting Ratios</span>
+                      </a>
+
+                      <a href="#" class="hover:text-sky-900 flex items-center py-2 text-sm font-medium">
+                        <span class="truncate">Cash Book</span>
+                      </a>
+
+                      <a href="#" class="hover:text-sky-900 flex items-center py-2 text-sm font-medium" aria-current="page">
+                        <span class="truncate">Adjusting Entries</span>
+                      </a>
+
+                      <a href="#" class="hover:text-sky-900 flex items-center py-2 text-sm font-medium">
+                        <span class="truncate">Bank Reconciliation Statement</span>
+                      </a>
+
+                      <a href="#" class="text-teal-600 hover:text-sky-900 flex items-center py-2 text-sm font-medium">
+                        <span class="truncate">See All &#8594;</span>
+                      </a>
+                    </nav>
+                  </div>
+                  <div>
+                    <h3 class="pt-6 text-l text-sky-900 font-bold tracking-tight">Cost Accounting</h3>
+                    <!-- This example requires Tailwind CSS v2.0+ -->
+                    <nav class="space-y-1 text-gray-500 py-4 border-b-2" aria-label="MCQs Quiz">
+                      <!-- Current: "bg-gray-100 text-gray-900", Default: "text-gray-600 hover:bg-gray-50 hover:text-gray-900" -->
+                      <a href="#" class="hover:text-sky-900 flex items-center py-2 text-sm font-medium" aria-current="page">
+                        <span class="truncate">Cost Accountancy</span>
+                      </a>
+
+                      <a href="#" class="hover:text-sky-900 flex items-center py-2 text-sm font-medium">
+                        <span class="truncate">Analysis of Cost</span>
+                      </a>
+
+                      <a href="#" class="hover:text-sky-900 flex items-center py-2 text-sm font-medium">
+                        <span class="truncate">Material Costing</span>
+                      </a>
+
+                      <a href="#" class="hover:text-sky-900 flex items-center py-2 text-sm font-medium" aria-current="page">
+                        <span class="truncate">Labor Costing</span>
+                      </a>
+
+                      <a href="#" class="hover:text-sky-900 flex items-center py-2 text-sm font-medium">
+                        <span class="truncate">Overhead Costing</span>
+                      </a>
+
+                      <a href="#" class="text-teal-600 hover:text-sky-900 flex items-center py-2 text-sm font-medium">
+                        <span class="truncate">See All &#8594;</span>
+                      </a>
+                    </nav>
+                  </div>
+                  <div>
+                    <h3 class="pt-6 text-l text-sky-900 font-bold tracking-tight">Management Accounting</h3>
+                    <!-- This example requires Tailwind CSS v2.0+ -->
+                    <nav class="space-y-1 text-gray-500 py-4 border-b-2" aria-label="MCQs Quiz">
+                      <!-- Current: "bg-gray-100 text-gray-900", Default: "text-gray-600 hover:bg-gray-50 hover:text-gray-900" -->
+                      <a href="#" class="hover:text-sky-900 flex items-center py-2 text-sm font-medium" aria-current="page">
+                        <span class="truncate">Cash Management</span>
+                      </a>
+
+                      <a href="#" class="hover:text-sky-900 flex items-center py-2 text-sm font-medium">
+                        <span class="truncate">Cost Audit</span>
+                      </a>
+
+                      <a href="#" class="hover:text-sky-900 flex items-center py-2 text-sm font-medium">
+                        <span class="truncate">Management Audit</span>
+                      </a>
+
+                      <a href="#" class="hover:text-sky-900 flex items-center py-2 text-sm font-medium" aria-current="page">
+                        <span class="truncate">Fund Flow Statement</span>
+                      </a>
+
+                      <a href="#" class="hover:text-sky-900 flex items-center py-2 text-sm font-medium">
+                        <span class="truncate">Control Ratios</span>
+                      </a>
+
+                      <a href="#" class="text-teal-600 hover:text-sky-900 flex items-center py-2 text-sm font-medium">
+                        <span class="truncate">See All &#8594;</span>
+                      </a>
+                    </nav>
+                  </div>
+                  <div>
+                    <h3 class="pt-6 text-l text-sky-900 font-bold tracking-tight">Cost Accounting MCQs</h3>
+                    <!-- This example requires Tailwind CSS v2.0+ -->
+                    <nav class="space-y-1 text-gray-500 py-4 border-b-2" aria-label="MCQs Quiz">
+                      <!-- Current: "bg-gray-100 text-gray-900", Default: "text-gray-600 hover:bg-gray-50 hover:text-gray-900" -->
+                      <a href="#" class="hover:text-sky-900 flex items-center py-2 text-sm font-medium" aria-current="page">
+                        <span class="truncate">Process Costing</span>
+                      </a>
+
+                      <a href="#" class="hover:text-sky-900 flex items-center py-2 text-sm font-medium">
+                        <span class="truncate">Product Costing System</span>
+                      </a>
+
+                      <a href="#" class="hover:text-sky-900 flex items-center py-2 text-sm font-medium">
+                        <span class="truncate">Standard Costing</span>
+                      </a>
+
+                      <a href="#" class="hover:text-sky-900 flex items-center py-2 text-sm font-medium" aria-current="page">
+                        <span class="truncate">Variable Costing</span>
+                      </a>
+
+                      <a href="#" class="hover:text-sky-900 flex items-center py-2 text-sm font-medium">
+                        <span class="truncate">Inventory Management</span>
+                      </a>
+
+                      <a href="#" class="text-teal-600 hover:text-sky-900 flex items-center py-2 text-sm font-medium">
+                        <span class="truncate">See All &#8594;</span>
+                      </a>
+                    </nav>
+                  </div>
+                  <div>
+                    <h3 class="pt-6 text-l text-sky-900 font-bold tracking-tight">MCQs Quiz</h3>
+                    <!-- This example requires Tailwind CSS v2.0+ -->
+                    <nav class="space-y-1 text-gray-500 py-4 border-b-2" aria-label="MCQs Quiz">
+                      <!-- Current: "bg-gray-100 text-gray-900", Default: "text-gray-600 hover:bg-gray-50 hover:text-gray-900" -->
+                      <a href="#" class="hover:text-sky-900 flex items-center py-2 text-sm font-medium" aria-current="page">
+                        <span class="truncate">Accounting Equations</span>
+                      </a>
+
+                      <a href="#" class="hover:text-sky-900 flex items-center py-2 text-sm font-medium">
+                        <span class="truncate">General Journal</span>
+                      </a>
+
+                      <a href="#" class="hover:text-sky-900 flex items-center py-2 text-sm font-medium">
+                        <span class="truncate">Cash Book</span>
+                      </a>
+
+                      <a href="#" class="hover:text-sky-900 flex items-center py-2 text-sm font-medium" aria-current="page">
+                        <span class="truncate">Trial Balance</span>
+                      </a>
+
+                      <a href="#" class="hover:text-sky-900 flex items-center py-2 text-sm font-medium">
+                        <span class="truncate">Financial Statements</span>
+                      </a>
+
+                      <a href="#" class="text-teal-600 hover:text-sky-900 flex items-center py-2 text-sm font-medium">
+                        <span class="truncate">See All &#8594;</span>
+                      </a>
+                    </nav>
+                  </div>
+                  <div>
+                    <h3 class="pt-6 text-l text-sky-900 font-bold tracking-tight">Short Questions</h3>
+                    <!-- This example requires Tailwind CSS v2.0+ -->
+                    <nav class="space-y-1 text-gray-500 py-4 border-b-2" aria-label="MCQs Quiz">
+                      <!-- Current: "bg-gray-100 text-gray-900", Default: "text-gray-600 hover:bg-gray-50 hover:text-gray-900" -->
+                      <a href="#" class="hover:text-sky-900 flex items-center py-2 text-sm font-medium" aria-current="page">
+                        <span class="truncate">Introduction to Accounting</span>
+                      </a>
+
+                      <a href="#" class="hover:text-sky-900 flex items-center py-2 text-sm font-medium">
+                        <span class="truncate">Special Journal</span>
+                      </a>
+
+                      <a href="#" class="hover:text-sky-900 flex items-center py-2 text-sm font-medium">
+                        <span class="truncate">Non-Trading Concerns</span>
+                      </a>
+
+                      <a href="#" class="hover:text-sky-900 flex items-center py-2 text-sm font-medium" aria-current="page">
+                        <span class="truncate">Manufacturing Accounts</span>
+                      </a>
+
+                      <a href="#" class="hover:text-sky-900 flex items-center py-2 text-sm font-medium">
+                        <span class="truncate">Transaction Analysis</span>
+                      </a>
+
+                      <a href="#" class="text-teal-600 hover:text-sky-900 flex items-center py-2 text-sm font-medium">
+                        <span class="truncate">See All &#8594;</span>
+                      </a>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End right column area -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-800" aria-label="Footer">
+    <!-- https://tailwindui.com/components/marketing/sections/footers#component-8fd8a490ec2fae888154eb83685bbe23 -->
+    <div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
+      <div class="flex gap-10 flex-wrap sm:flex-nowrap justify-around">
+        <nav class="-mx-5 -my-2 flex flex-wrap flex-col min-w-max" aria-label="Footer">
+          <h3 class="text-white px-5 py-2 uppercase font-semibold">Quick Links</h3>
+          <div>
+            <div class="px-5 py-2">
+              <a href="#" class="text-base text-gray-200 hover:text-gray-500"> Contact Us </a>
+            </div>
+
+            <div class="px-5 py-2">
+              <a href="#" class="text-base text-gray-200 hover:text-gray-500"> Privacy Policy </a>
+            </div>
+
+            <div class="px-5 py-2">
+              <a href="#" class="text-base text-gray-200 hover:text-gray-500"> Terms of Use </a>
+            </div>
+
+            <div class="px-5 py-2">
+              <a href="#" class="text-base text-gray-200 hover:text-gray-500"> Sitemap </a>
+            </div>
+          </div>
+        </nav>
+        <nav class="-mx-5 -my-2 flex flex-wrap flex-col min-w-max" aria-label="Footer">
+          <h3 class="text-white px-5 py-2 uppercase font-semibold">Organization</h3>
+          <div>
+            <div class="px-5 py-2">
+              <a href="#" class="text-base text-gray-200 hover:text-gray-500"> Finance Strategists </a>
+            </div>
+
+            <div class="px-5 py-2">
+              <a href="#" class="text-base text-gray-200 hover:text-gray-500"> 949-702-3057 </a>
+            </div>
+
+            <div class="px-5 py-2">
+              <a href="#" class="text-base text-gray-200 hover:text-gray-500"> 24595 Town Center<br>Dr. Valencia, CA<br>91355 </a>
+            </div>
+
+          </div>
+        </nav>
+        <!-- Logo -->
+        <div class="flex justify-center sm:justify-end items-center grow min-w-max">
+          <a href="#">
+            <span class="sr-only">Finance Strategists</span>
+            <img class="h-14 w-auto sm:h-12" src="assets/finance-strategists_logo_white.png" alt="">
+          </a>
+        </div>
+      </div>
+      <div class="flex gap-8 sm:justify-between border-t border-gray-500 pt-5 mt-16 justify-center flex-wrap sm:flex-nowrap">
+        <p class="text-xs md:text-sm text-center text-base text-gray-200">&copy; 2022 Finance Strategists. All rights reserved.</p>
+        <div class="flex justify-center space-x-6">
+          <a href="https://www.facebook.com/FinanceStrategists/" class="text-white hover:text-gray-300">
+            <span class="sr-only">Facebook</span>
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                clip-rule="evenodd" />
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/financestrategists/" class="text-white hover:text-gray-300">
+            <span class="sr-only">Instagram</span>
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                clip-rule="evenodd" />
+            </svg>
+          </a>
+          <a href="https://twitter.com/FinStrategists" class="text-white hover:text-gray-300">
+            <span class="sr-only">Twitter</span>
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+            </svg>
+          </a>
+          <!--<a href="https://www.youtube.com/channel/UCqScqlMRSeoHXRigrf0WxLg" class="text-gray-400 hover:text-gray-500">
+              <span class="sr-only">YouTube</span>
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/company/finance-strategists/" class="text-gray-400 hover:text-gray-500">
+              <span class="sr-only">LinkedIn</span>
+              <svg class="w-6 h-6 text-blue-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path
+                  d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                ></path>
+              </svg>
+            </a>-->
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
