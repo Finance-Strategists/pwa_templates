@@ -1,0 +1,858 @@
+<!doctype html>
+<!-- https://validator.w3.org/nu/?doc=https%3A%2F%2Fweb-vitals-starter-templates.pages.dev&showoutline=yes -->
+<html lang="en-US">
+
+<head>
+  <!-- INITIAL META -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{TITLE}}}}</title>
+  <meta name="description" content="{{META_DESCRIPTION}}">
+
+  <!-- PRELOAD: we know the exact url of the source -->
+  <link rel="preload" href="assets/finance-strategists_logo.png.webp" as="image" type="image/webp" importance="high">
+
+  <!-- PRECONNECT: we know the exact domain will be used -->
+  <!-- Google Tag Manager -->
+  <link rel="preconnect" href="https://www.googletagmanager.com" importance="high" crossorigin>
+
+  <!-- DNS-PREFETCH: we know the exact domain *may* be used -->
+  <!-- Google Maps -->
+  <link rel="dns-prefetch" href="https://maps.google.com" importance="low" crossorigin>
+  <link rel="dns-prefetch" href="https://maps.googleapis.com" importance="low" crossorigin>
+
+  <!-- CRITICAL CSS: includes only css used in the initial viewport -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="dist/output.css" rel="stylesheet">
+  <style>
+    html {
+      /* overflow-y: overlay; -- this is commented out due to overflow issues that occur// scrollbar is on top of the body*/
+      /* prevents cls caused by the scrollbar */
+      scroll-behavior: smooth;
+      /* smooth scrolling to in-page anchors */
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <header class="bg-gray-800">
+    <!-- https://tailwindui.com/components/marketing/sections/heroes#component-c2665b7bbef783e2d6683ad7e2075e10 -->
+    <div class="relative overflow-hidden max-w-7xl mx-auto">
+      <div class="relative pt-6 pb-16 sm:pb-24 px-3">
+        <div>
+          <nav class="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6" aria-label="Global">
+            <div class="flex items-center flex-1">
+              <div class="flex items-center justify-between w-full md:w-auto">
+                <a href="#">
+                  <span class="sr-only">Finance Strategists</span>
+                  <img class="h-8 w-auto sm:h-10" src="assets/finance-strategists_logo_white.png" alt="">
+                </a>
+                <div class="-mr-2 flex items-center md:hidden">
+                  <button type="button" class="bg-gray-800 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-700 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <!-- Heroicon name: outline/menu -->
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="grow place-content-end hidden space-x-10 md:flex md:ml-10">
+                <a href="#" class="font-medium text-white hover:text-gray-300">Dictionary</a>
+
+                <a href="#" class="font-medium text-white hover:text-gray-300">Interviews</a>
+
+                <a href="#" class="font-medium text-white hover:text-gray-300">Services</a>
+
+                <a href="#" class="font-medium text-white hover:text-gray-300">Videos</a>
+
+                <a href="#" class="font-medium text-white hover:text-gray-300">About Us</a>
+
+                <a href="#" class="font-medium text-white hover:text-gray-300">Contact</a>
+              </div>
+            </div>
+          </nav>
+
+          <!--
+              Mobile menu, show/hide based on menu open state.
+
+              Entering: "duration-150 ease-out"
+                From: "opacity-0 scale-95"
+                To: "opacity-100 scale-100"
+              Leaving: "duration-100 ease-in"
+                From: "opacity-100 scale-100"
+                To: "opacity-0 scale-95"
+            -->
+          <div class="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right hidden">
+            <div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+              <div class="px-5 pt-4 flex items-center justify-between">
+                <div>
+                  <img class="h-8 w-auto sm:h-10" src="assets/finance-strategists_logo.png.webp" alt="">
+                </div>
+                <div class="-mr-2">
+                  <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-teal-500">
+                    <span class="sr-only">Close menu</span>
+                    <!-- Heroicon name: outline/x -->
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Dictionary</a>
+
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Interviews</a>
+
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Services</a>
+
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Videos</a>
+
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">About Us</a>
+
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Contact</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <main class="mt-16 sm:mt-24">
+          <div class="mx-auto max-w-7xl">
+            <div class="text-center">
+
+              <div class="breadcrumbs px-5 py-2.5 text-white text-s font-semibold" typeof="BreadcrumbList" vocab="https://schema.org/">
+                <span property="itemListElement" typeof="ListItem">
+                  <a property="item" typeof="WebPage" title="Go to {{Home}}." href="/" class="home underline"><span property="name">Home</span></a>
+                  <meta property="position" content="1">
+                </span>
+                <span>&nbsp;&raquo;&nbsp;</span>
+                <span property="itemListElement" typeof="ListItem">
+                  <a property="item" typeof="WebPage" title="Go to {{Founder Spotlight}}." href="/about-us/" class="underline"><span property="name">Founders Spotlight</span></a>
+                  <meta property="position" content="2">
+                </span>
+                <span>&nbsp;&raquo;&nbsp;</span>
+                <span property="itemListElement" typeof="ListItem">
+                  <span property="name" class="current-item font-normal">Nate Smith, MPAcc, CPA</span>
+                  <meta property="url" content="https://learn.financestrategists.com/finance-terms/cogs/">
+                  <meta property="position" content="3">
+                </span>
+              </div>
+
+              <h1 class="flex flex-wrap gap-x-4 justify-center mt-4 tracking-tight text-white">
+                <h1 class="text-3xl sm:text-4xl sm:mt-5 sm:leading-10 lg:mt-6 lg:text-5xl xl:text-6xl font-extrabold text-white mb-4">
+                  <span class="md:block  mb-2">What is a Chartered</span>
+                  <span class="md:block  mb-2">Financial Analyst (CFA)?</span>
+                </h1>
+                <span class="text-white md:block mb-2.5 mt-10">
+                  <div class="mx-auto pt-4">
+                    <div class="flex items-center mx-auto justify-center">
+                      <img src="assets/about-us/true-tamplin@2x.jpg" alt="" class="rounded-full h-12 w-12 mr-2">
+                      <div class="flex flex-col justify-center items-start">
+                        <h3 class="text-sm sm:text-xl tracking-tight">Written by <a class="font-semibold text-teal-600 hover:text-teal-400" href="#">True Tamplin, BSc, CEPF®</a>
+                        </h3>
+                        <p class="font-normal sm:text-sm text-xs">Updated on June 13, 2022</p>
+                        <p class="font-normal sm:text-sm text-xs">Reviewed by <a class="text-teal-600 hover:text-teal-400" href="#">Editorial Team</a></p>
+                      </div>
+                    </div>
+                  </div>
+
+                </span>
+              </h1>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </header>
+
+  <main class="mt-6">
+    <section class="sm:px-4">
+      <!-- 3 column wrapper -->
+      <div class="flex-grow w-full max-w-8xl mx-auto xl:pb-16 xl:pt-8 lg:flex max-w-7xl mx-auto">
+        <!-- Left sidebar & main wrapper -->
+        <div class="flex-1 min-w-0 bg-white xl:flex xl:pl-4 relative">
+          <div class="bg-transparent border-gray-200 xl:border-b-0 xl:flex-shrink-0 xl:w-64 sticky rounded top-2 left-0 z-10">
+            <div class="border-2 rounded-xl ml-6 mr-6 mb-6 sm:ml-6 lg:ml-8 xl:ml-0 bg-white lg:sticky lg:top-2 lg:left-0">
+              <!-- Start left column area -->
+              <div class="h-min">
+                <div class="md-border-b-2">
+
+                  <!-- component -->
+                  <!-- Modified TOC -->
+                  <div class="px-2 bg-white rounded-xl">
+                    <div id="toc-accordion" data-accordion="collapse" data-active-classes="bg-white text-sky-900" data-inactive-classes="text-sky-900">
+                      <h2 id="toc-accordion-heading-1">
+                        <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left border-gray-200 bg-white text-gray-900" data-accordion-target="#toc-accordion-body-1" aria-expanded="false" aria-controls="toc-accordion-body-1">
+                          <span class="text-xl text-sky-900 font-bold tracking-tight">Table of Contents</span>
+                          <svg data-accordion-icon="" class="w-6 h-6 rotate-180 shrink-0 transform transition-transform duration-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                        </button>
+                      </h2>
+                      <div id="toc-accordion-body-1" class="hidden" aria-labelledby="toc-accordion-heading-1">
+                        <div class="font-light border-gray-200">
+                          <nav class="pb-6 space-y-1" aria-label="Table of Contents">
+                            <!-- Current: "bg-gray-100 text-gray-900", Default: "text-gray-600 hover:bg-gray-50 hover:text-gray-900" -->
+                            <a href="#" class="bg-gray-100 text-teal-600 flex items-center px-3 py-2 text-sm font-medium rounded-md" aria-current="page">
+                              <span class="truncate">What is a Chartered Financial Analyst (CFA)?</span>
+                            </a>
+
+                            <a href="#" class="text-teal-600 hover:bg-gray-50 hover:text-sky-900 flex items-center px-3 py-2 text-sm font-medium rounded-md">
+                              <span class="truncate">What Are the Duties of a Chartered Financial Analyst?</span>
+                            </a>
+
+                            <a href="#" class="text-teal-600 hover:bg-gray-50 hover:text-sky-900 flex items-center px-3 py-2 text-sm font-medium rounded-md">
+                              <span class="truncate">How to Get a CFA Certification</span>
+                            </a>
+                            <a href="#" class="text-teal-600 hover:bg-gray-50 hover:text-sky-900 flex items-center px-3 py-2 text-sm font-medium rounded-md">
+                              <span class="truncate">What Are the Benefits of CFA Designation?</span>
+                            </a>
+
+                            <a href="#" class="text-teal-600 hover:bg-gray-50 hover:text-sky-900 flex items-center px-3 py-2 text-sm font-medium rounded-md">
+                              <span class="truncate">A Brief Histoy of CFA</span>
+                            </a>
+
+                            <a href="#" class="text-teal-600 hover:bg-gray-50 hover:text-sky-900 flex items-center px-3 py-2 text-sm font-medium rounded-md">
+                              <span class="truncate">Chartered Financial Analyst (CFA) FAQs</span>
+                            </a>
+                          </nav>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- TOC FIX END -->
+
+                  <script src="https://unpkg.com/flowbite@1.3.3/dist/flowbite.js"></script>
+                  <!-- do we need to integrate flowbite.js, or do we have another method? -->
+                </div>
+                
+              </div>
+              <!-- End left column area -->
+            </div>
+          </div>
+
+          <div class="bg-white xl:min-w-[800px] lg:flex-1 xl:border-l xl:border-gray-200 z-10">
+            <div class="h-full pb-6 px-4 sm:px-6 xl:px-16 max-w-3xl mx-auto">
+
+              <!-- Start main area-->
+              <div class="relative h-full">
+                <div class="">
+                  <article class="">
+                    <section class="">
+                      <div class="pb-8  pt-8">
+                        <h2 class="pb-6 text-2xl text-sky-900 font-bold tracking-tight">What Is a Chartered Financial Analyst (CFA)?</h2>
+                        <p class="mb-6 text-gray-500 text-md">Chartered Financial Analyst (CFA) is a designation for <a class="text-teal-600 hover:text-sky-900 font-bold" data-mil="1385" href="https://learn.financestrategists.com/finance-terms/investments/">investment</a> and finance professionals that certifies their expertise across a wide range of finance- and investment-related topics.</p>
+                        <p class="mb-6 text-gray-500 text-md">The designation is awarded by the CFA Institute.</p>
+                        <p class="mb-6 text-gray-500 text-md">An individual who has gone through and passed the institute’s rigorous program for certification is said to be a CFA charterholder.</p>
+                        <p class="mb-6 text-gray-500 text-md">The CFA designation boosts career prospects and results in tangible <a class="text-teal-600 hover:text-sky-900 font-bold" data-mil="1385" href="https://learn.financestrategists.com/finance-terms/gains-term-definition/">gains</a>, such as higher salaries, for charterholders.</p>
+                        <p class="mb-6 text-gray-500 text-md">CFA charterholders can pick from a broad array as far as choice of career is concerned.</p>
+                        <p class="mb-6 text-gray-500 text-md">They can work in various sectors of finance, from banking to <a class="text-teal-600 hover:text-sky-900 font-bold" data-mil="1385" href="https://learn.financestrategists.com/finance-terms/investment-management/">investment management</a> to corporate mergers, as well as in different industries, such as technology and arts.</p>
+                      </div>
+                    </section>
+
+                    <section class="">
+                      <div class="pb-8">
+                        <h2 class="pb-6 text-2xl text-sky-900 font-bold tracking-tight">What Are the Duties of a Chartered Financial Analyst?</h2>
+                        <p class="mb-6 text-gray-500 text-md">A CFA designation covers all aspects of the finance industry. Hence, CFAs are most closely-associated with the banking and investment industry.</p>
+                        <p class="mb-6 text-gray-500 text-md">Their roster of duties may consist of <a class="text-teal-600 hover:text-sky-900 font-bold" data-mil="1385" href="https://learn.financestrategists.com/finance-terms/equity/">equity</a> analysis, ensuring legal and regulatory compliance, risk management, and managing a portfolio of <a class="text-teal-600 hover:text-sky-900 font-bold" data-mil="1385" href="https://learn.financestrategists.com/finance-terms/assets/">assets</a>.</p>
+                        <p class="mb-6 text-gray-500 text-md">A typical career path for an analyst may start in a junior financial analyst position and culminate in either becoming a CEO or managing a large portfolio of <a class="text-teal-600 hover:text-sky-900 font-bold" data-mil="1385" href="https://learn.financestrategists.com/finance-terms/stock/">stocks</a> and other assets.</p>
+                        <p class="mb-6 text-gray-500 text-md">They can also function as accountants or auditors, responsible for checking <a class="text-teal-600 hover:text-sky-900 font-bold" data-mil="1385" href="https://learn.financestrategists.com/explanation/introduction-to-accounting/what-is-accounting/">accounting</a> books and making sure they are in compliance with existing regulation.</p>
+                        <p class="mb-6 text-gray-500 text-md">Because finance is a pervasive function across all industries, a CFA’s job prospects are not limited to the industries above.</p>
+                        <p class="mb-6 text-gray-500 text-md">They can also find employment in other industries.</p>
+                        <p class="mb-6 text-gray-500 text-md">For example, they can work as a journalist covering <a class="text-teal-600 hover:text-sky-900 font-bold" data-mil="1385" href="https://learn.financestrategists.com/finance-terms/business/">business</a> news because they understand the arcane and complex world of banking and investment.</p>
+                        <p class="mb-6 text-gray-500 text-md">CFA charterholders who demonstrate excellent people management and leadership skills can also move through the ranks to become CEOs of their respective organizations.</p>
+                      </div>
+                    </section>
+
+                    <section class="">
+                      <div class="pb-8">
+                        <h2 class="pb-6 text-2xl text-sky-900 font-bold tracking-tight">How to Get a CFA Certification</h2>
+                        <p class="mb-6 text-gray-500 text-md">Becoming a CFA charterholder requires intensive study and is expensive.</p>
+                        <p class="mb-6 text-gray-500 text-md">According to various estimates, it can take approximately 250 hours to 300 hours of preparation per year and <a class="text-teal-600 hover:text-sky-900 font-bold" data-mil="1385" href="https://learn.financestrategists.com/explanation/cost-accounting/what-is-cost-and-its-types/">cost</a> anywhere between $2500 to $8500.</p>
+                        <p class="mb-6 text-gray-500 text-md">Candidates aspiring to become a CFA charterholder must fulfill either one of the three eligibility requirements to be eligible for the exams.</p>
+                        <p class="mb-6 text-gray-500 text-md">They must either have an undergraduate bachelor’s degree or must be in the final year of their degree.</p>
+                        <p class="mb-6 text-gray-500 text-md">Alternately, they must have four years of professional work experience.</p>
+                        <p class="mb-6 text-gray-500 text-md">According to a factsheet on the CFA website, it takes four or more years to complete the entire program. 
+                        </p>
+                        <p class="mb-6 text-gray-500 text-md">Since it offers a comprehensive perspective of the finance industry, the CFA exam tests candidates on a broad range of topics.</p>
+                        <p class="mb-6 text-gray-500 text-md">Aspiring CFAs are expected to study from the Candidate Body of Knowledge (CBOK).
+                        </p>
+                        <p class="mb-6 text-gray-500 text-md">The areas of study for CFA include ethical and professional standards, quantitative methods, economics, <a class="text-teal-600 hover:text-sky-900 font-bold" data-mil="1385" href="https://learn.financestrategists.com/explanation/management-accounting/financial-reporting/">financial reporting</a> and analysis, equity investments, <a class="text-teal-600 hover:text-sky-900 font-bold" data-mil="1385" href="https://learn.financestrategists.com/finance-terms/fixed-income/">fixed income</a> etc.</p>
+                        <p class="mb-6 text-gray-500 text-md">There are three parts or levels to the CFA exam.</p>
+                        <p class="mb-6 text-gray-500 text-md">The Level I exam is conducted four times a year in February, May, August, and November.</p>
+                        <p class="mb-6 text-gray-500 text-md">Up until now, it was conducted in a paper-based format across various locations around the world.</p>
+                        <p class="mb-6 text-gray-500 text-md">Starting 2021, CFA exams will be offered in computer formats in two sessions, each with a duration of two hours and fifteen minutes.</p>
+                        <p class="mb-6 text-gray-500 text-md">The number of questions per exam has also been reduced to 180 questions from the current 240 questions.</p>
+                        <p class="mb-6 text-gray-500 text-md">Levels II and III are both conducted in June and are available in 250 cities.</p>
+                        <p class="mb-6 text-gray-500 text-md">While Level I and Level II are entirely multiple-choice, Level III also has an essay question.</p>
+                        <p class="mb-6 text-gray-500 text-md">Both Level II and Level III have a duration of six hours in their paper-based format.</p>
+                        <p class="mb-6 text-gray-500 text-md">Like Level I, both will also move to an entirely computer-based format in 2021 and their duration will become 4.5 hours.</p>
+                        <p class="mb-6 text-gray-500 text-md">To become a charterholder, candidates must pass each exam in sequence i.e., they must successfully complete Level I in order to qualify for Level II and so on.</p>
+                        <p class="mb-6 text-gray-500 text-md"></p>
+                        <p class="mb-6 text-gray-500 text-md"></p>
+                        <p class="mb-6 text-gray-500 text-md"></p>
+                        <p class="mb-6 text-gray-500 text-md"></p>
+                      </div>
+                    </section>
+
+                    <section class="">
+                      <div class="pb-8">
+                        <h2 class="pb-6 text-2xl text-sky-900 font-bold tracking-tight">What Are the Benefits of CFA Designation</h2>
+                        <p class="mb-6 text-gray-500 text-md">A CFA designation is a much sought-after title and confers substantial benefits to its holders.</p>
+                        <p class="mb-6 text-gray-500 text-md">Because passing the exam requires rigor and breadth of expertise across multiple topics, CFA charterholders are considered disciplined and bright.</p>
+                        <p class="mb-6 text-gray-500 text-md">A charterholder is likely to receive a career bump once he or she passes the eligibility exam.</p>
+                        <p class="mb-6 text-gray-500 text-md">CFAs are also generously paid.</p>
+                        <p class="mb-6 text-gray-500 text-md">Depending on their position in the company hierarchy and years of experience, CFAs can earn as much as $344,000.</p>
+                        <p class="mb-6 text-gray-500 text-md">The starting salary for a financial analyst is around $80,000, which is not a shabby figure for someone who may be just out of college.</p>
+                        <p class="mb-6 text-gray-500 text-md">Another added benefit of the CFA designation is the opportunity to work across industries.</p>
+                        <p class="mb-6 text-gray-500 text-md">As mentioned earlier, the finance department is an essential component of all companies.</p>
+                        <p class="mb-6 text-gray-500 text-md">In that sense, a CFA is a generalist who can work and custom craft their job function to the industry that they work in.</p>
+                        <p class="mb-6 text-gray-500 text-md">For example, a CFA charterholder’s career may start in investment banking and progress onto technology where, after several years of getting to know the business, they may start their own company or lead an organization.</p>
+                      </div>
+                    </section>
+
+                    <section class="">
+                      <div class="pb-8">
+                        <h2 class="pb-6 text-2xl text-sky-900 font-bold tracking-tight">A Brief History of CFA</h2>
+                        <p class="mb-6 text-gray-500 text-md">The National Federation of Financial Analysts Societies (NFFAS) is considered a precursor to the current CFA institute.</p>
+                        <p class="mb-6 text-gray-500 text-md">It was founded in 1947 by representatives from 11 analyst societies in Boston, Chicago, New York, and Philadelphia.</p>
+                        <p class="mb-6 text-gray-500 text-md">That time coincided with a greater awareness of the importance of managing money.</p>
+                        <p class="mb-6 text-gray-500 text-md">Benjamin Graham had already published his famous tomes – The Intelligent Investor and Security Analyst – and the nation was in the beginning years of a postwar prosperity boom.</p>
+                        <p class="mb-6 text-gray-500 text-md">Analysts had refined the techniques used by newspaper journalists, who covered business, established a discipline.</p>
+                        <p class="mb-6 text-gray-500 text-md">But their profession was still considered on the <a data-mil="1385" href="https://learn.financestrategists.com/finance-terms/margin/">margins</a> of mainstream society and did not have the recognition of, say, a physician or an engineer.</p>
+                        <p class="mb-6 text-gray-500 text-md">One of the tasks of the analyst societies that came together to form NFFAS was to provide education and training to members.</p>
+                        <p class="mb-6 text-gray-500 text-md">As a start, they began offering evening classes at Northeastern University. Graham had already suggested a designation for qualified analysts, called “Quantified Security Analyst”.</p>
+                        <p class="mb-6 text-gray-500 text-md">In 1953, NFFAS commenced the process of defining expectations and course content for charter holders.</p>
+                        <p class="mb-6 text-gray-500 text-md">Members of the Chicago Society came up with the idea to test analysts in a three-stage series of eight exams.</p>
+                        <p class="mb-6 text-gray-500 text-md">A. Moyer Kulp, a senior vice president of Wellington Management, in Philadelphia is credited with setting the guidelines for CFA charterholders.</p>
+                        <p class="mb-6 text-gray-500 text-md">The Institute of Chartered Financial Analyst (ICFA) awarded its first CFA charter to George Hansen of Boston in 1963.</p>
+                      </div>
+                    </section>
+
+                    <!-- Dropdown Accordion -->
+                    <section class="">
+                      <div class="pb-8">
+                        <h2 class="pb-6 text-2xl text-sky-900 font-bold tracking-tight">Chartered Financial Analyst (CFA) FAQs</h2>
+                        <div id="dropdown-accordion" data-accordion="open" class="border-b-2" data-active-classes="bg-white text-gray-900" data-inactive-classes="text-gray-500">
+
+                          <h3 id="dropdown-accordion-heading-1">
+                            <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left border-t-2 bg-white text-gray-900" data-accordion-target="#dropdown-accordion-body-1" aria-expanded="true" aria-controls="dropdown-accordion-body-1">
+                              <span class="font-bold text-sky-900">What does CFA stand for?</span>
+                              <svg data-accordion-icon="" class="w-6 h-6  rotate-180 shrink-0 transform transition-transform duration-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                            </button>
+                          </h3>
+                          <div id="dropdown-accordion-body-1" class="" aria-labelledby="dropdown-accordion-heading-1">
+                            <div class="py-5 font-light">
+                              <p class="mb-2 text-gray-500 text-md">CFA stands for Chartered Financial Analyst, which is the designation that most portfolio managers either have or try to obtain.</p>
+                            </div>
+                          </div>
+
+                          <h3 id="dropdown-accordion-heading-2">
+                            <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left border-t-2 bg-white text-gray-900" data-accordion-target="#dropdown-accordion-body-2" aria-expanded="true" aria-controls="dropdown-accordion-body-2">
+                              <span class="font-bold text-sky-900">What is a Chartered Financial Analyst?</span>
+                              <svg data-accordion-icon="" class="w-6 h-6  rotate-180 shrink-0 transform transition-transform duration-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                            </button>
+                          </h3>
+                          <div id="dropdown-accordion-body-2" class="" aria-labelledby="dropdown-accordion-heading-2">
+                            <div class="py-5 font-light">
+                              <p class="mb-2 text-gray-500 text-md">Text</p>
+                            </div>
+                          </div>
+
+                          <h3 id="dropdown-accordion-heading-3">
+                            <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left border-t-2 bg-white text-gray-900" data-accordion-target="#dropdown-accordion-body-3" aria-expanded="true" aria-controls="dropdown-accordion-body-3">
+                              <span class="font-bold text-sky-900">What is the purpose of the CFA designation?</span>
+                              <svg data-accordion-icon="" class="w-6 h-6  rotate-180 shrink-0 transform transition-transform duration-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                            </button>
+                          </h3>
+                          <div id="dropdown-accordion-body-3" class="" aria-labelledby="dropdown-accordion-heading-3">
+                            <div class="py-5 font-light">
+                              <p class="mb-2 text-gray-500 text-md">Text</p>
+                            </div>
+                          </div>
+
+                          <h3 id="dropdown-accordion-heading-4">
+                            <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left border-t-2 bg-white text-gray-900" data-accordion-target="#dropdown-accordion-body-4" aria-expanded="true" aria-controls="dropdown-accordion-body-4">
+                              <span class="font-bold text-sky-900">What are some qualifications to the CFA designation?</span>
+                              <svg data-accordion-icon="" class="w-6 h-6  rotate-180 shrink-0 transform transition-transform duration-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                            </button>
+                          </h3>
+                          <div id="dropdown-accordion-body-4" class="" aria-labelledby="dropdown-accordion-heading-4">
+                            <div class="py-5 font-light">
+                              <p class="mb-2 text-gray-500 text-md">Text</p>
+                            </div>
+                          </div>
+
+                          <h3 id="dropdown-accordion-heading-5">
+                            <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left border-t-2 bg-white text-gray-900" data-accordion-target="#dropdown-accordion-body-5" aria-expanded="true" aria-controls="dropdown-accordion-body-5">
+                              <span class="font-bold text-sky-900">What is a CFA's typical salary?</span>
+                              <svg data-accordion-icon="" class="w-6 h-6  rotate-180 shrink-0 transform transition-transform duration-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                            </button>
+                          </h3>
+                          <div id="dropdown-accordion-body-5" class="" aria-labelledby="dropdown-accordion-heading-5">
+                            <div class="py-5 font-light">
+                              <p class="mb-2 text-gray-500 text-md">Text</p>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </section>
+
+                    <!-- About the Author -->
+                    <section>
+                      <div class="bg-slate-50 rounded-md p-10 z-10">
+                        <div class="flex flex-wrap gap-10 mb-10 justify-center sm:justify-start">
+                          <img src="assets/about-us/true-tamplin@2x.jpg" alt="" class="rounded-full h-36 w-36">
+                          <div class="flex flex-col justify-center sm:items-start items-center">
+                            <p class="text-teal-600 font-semibold uppercase tracking-widest text-sm">About the Author</p>
+                            <h3 class="pb-5 pt-4 text-lg sm:text-2xl text-sky-900 font-bold tracking-tight">True Tamplin, BSc, CEPF®</h3>
+
+                            <!-- Icons for Social Media Links -->
+                            <div class="text-teal-600 flex justify-start space-x-3 md:space-x-4 ">
+                              <a target="_blank" href="https://www.facebook.com/truetamplinofficial/" class="text-gray-400 hover:text-gray-500">
+                                <span class="sr-only">Facebook</span>
+                                <svg class="h-4 w-4 fill-teal-600 hover:fill-teal-600/75" viewBox="0 0 24 24" aria-hidden="true">
+                                  <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
+                                </svg>
+                              </a>
+                              
+                              <a target="_blank" href="https://www.linkedin.com/in/truetamplin/" class="text-gray-400 hover:text-gray-500">
+                                <span class="sr-only">Linkedin</span>
+                                <svg class="h-4 w-4 fill-teal-600 hover:fill-teal-600/75"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 448 512">
+                                  <path
+                                    d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                                  ></path>
+                                </svg>
+                              </a>
+                      
+                              <a target="_blank" href="https://www.instagram.com/truetamplin/" class="text-gray-400 hover:text-gray-500">
+                                <span class="sr-only">Instagram</span>
+                                <svg class="h-4 w-4 fill-teal-600 hover:fill-teal-600/75" viewBox="0 0 24 24" aria-hidden="true">
+                                  <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" />
+                                </svg>
+                              </a>
+                      
+                              <a target="_blank" href="https://twitter.com/truetamplin" class="text-gray-400 hover:text-gray-500">
+                                <span class="sr-only">Twitter</span>
+                                <svg class="h-4 w-4 fill-teal-600 hover:fill-teal-600/75" viewBox="0 0 24 24" aria-hidden="true">
+                                  <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                                </svg>
+                              </a>
+                      
+                              <a target="_blank" href="https://www.youtube.com/channel/UC_GcH_kZrnDgshvXerlwx-Q" class="text-gray-400 hover:text-gray-500">
+                                <span class="sr-only">Youtube</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 fill-teal-600 hover:fill-teal-600/75" viewBox="0 0 16 16"> <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+                                </svg>
+                                
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div>
+                          <p class="mb-6 text-gray-500 text-sm leading-6">True Tamplin is a published author, public speaker, CEO of UpDigital, and founder of Finance Strategists.</p>
+
+                          <p class="mb-6 text-gray-500 text-sm leading-6">True is a Certified Educator in Personal Finance (CEPF®), author of <a class="text-teal-600 hover:text-sky-900 font-bold" href="https://books.google.com/books?id=ZsOPEAAAQBAJ">The Handy Financial Ratios Guide</a>, a member of the Society for Advancing Business Editing and Writing, contributes to his financial education site, Finance Strategists, and has spoken to various financial communities such as the <a class="text-teal-600 hover:text-sky-900 font-bold" href="https://www.cfasociety.org/orangecounty/Lists/Events%20Calendar/DispForm.aspx?ID=960&amp;ContentTypeId=0x010200B3715C9502B46541BE06BD68E9735E320101005276EB7685500C4B8B1FE406738977A7">CFA Institute</a>, as well as university students like his Alma mater, <a class="text-teal-600 hover:text-sky-900 font-bold" href="https://www.biola.edu/blogs/business-ministry-life/2019/true-tamplin-create-your-own-momentum">Biola University</a>, where he received a bachelor of science in business and data analytics.</p>
+                          
+                          <p class="mb-6 text-gray-500 text-sm leading-6">To learn more about True, visit his <a class="text-teal-600 hover:text-sky-900 font-bold" href="https://www.truetamplin.com/">personal website</a>, view his author profile on <a class="text-teal-600 hover:text-sky-900 font-bold" href="https://www.amazon.com/True-Tamplin/e/B07D43CN9Z%3Fref=dbs_a_mng_rwt_scns_share">Amazon</a>, or check out his speaker profile on the <a class="text-teal-600 hover:text-sky-900 font-bold" href="https://societyspeakers.cfainstitute.org/speaker/true-tamplin?b=s">CFA Institute website</a>.</p>
+                        </div>
+                      </div>
+                    </section>
+                    <section class="mt-10">
+                      <div class="">
+                        <h2  class="text-2xl md:text-3xl lg:text-4xl text-sky-900 font-bold tracking-tight text-start pb-8 pt-4">Leave a Comment</h2>
+                        <div class="pb-6">
+                          <div>
+                            <label for="message_box" class="block mb-2 text-sm font-medium text-gray-900"></label>
+                            <textarea id="message_box" class="resize-y rounded bg-white border border-gray-300 w-full h-40 mt-2 p-2.5 focus:ring-blue-500 focus:border-blue-500" placeholder="Message" required=""></textarea>
+                          </div>
+
+                          <div class="grid grid-cols-3 gap-4">
+                            <div>
+                              <label for="full_name" class="block mb-2 text-sm font-medium text-gray-900"></label>
+                              <input type="text" id="full_name" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Name" required="">
+                            </div>
+                            <div>
+                              <label for="email_address_2" class="block mb-2 text-sm font-medium text-gray-900"></label>
+                              <input type="text" id="email_address_2" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Email" required="">
+                            </div>
+                            <div>
+                              <label for="website_01" class="block mb-2 text-sm font-medium text-gray-900"></label>
+                              <input type="text" id="website_01" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Website" required="">
+                            </div>
+                          </div>
+                          <div class="flex gap-2 py-6">
+                            <input type="checkbox" id="checkbox_save" class="default:ring-2 ...">
+                            <label for="checkbox_save" class="block mb-2 text-sm font-medium text-gray-600">Save my name , email, and website in this browser for the next time I comment.</label>
+                          </div>
+                          <div class="flex justify-start pt-4">
+                            <button type="submit" class="inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-teal-600 hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 w-40 h-11">Post Comment</button>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                  </article>
+                  
+                </div>
+              </div>
+              <!-- End main area -->
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:flex-shrink-0 px-4 z-10">
+          <div class="h-full lg:w-60">
+            <!-- Start right column area -->
+            <div class="h-full relative">
+              <div class="pb-6 text-xl text-sky-900 font-bold tracking-tight">
+                <div class="flex flex-wrap justify-center">
+                  <!-- Sticky CTA -->
+                  <div class="pl-3 pr-3 pb-10 pt-4 border-y-2 flex-grow justify-center flex sm:flex-nowrap">
+                    <div class="min-w-[232px]">
+                      <h2 class="pb-4 pt-6 text-xl text-sky-900 font-bold tracking-tight">Get Help Now!</h2>
+                      <p class="text-gray-500 flex items-center py-4 text-sm font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae nostrum repellendus ipsam exercitationem necessitatibus accusamus quasi possimus non est sequi consequatur, dignissimos incidunt at distinctio. Debitis sint doloremque harum placeat!</p>
+                      <button class="w-36 bg-teal-600 hover:text-teal-600 border-teal-600 font-semibold text-white py-2 px-4 hover:border-current hover:bg-transparent border-2 rounded-md text-sm">
+                        <span>Get Help Now!</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <!-- End right column area -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modified Financial Advisor Accordion -->
+    <section class="bg-teal-600 mt-5 px-6 pt-6 pb-10 sm:px-10">
+      <div class="max-w-7xl mx-auto
+      overflow-hidden sm:px-6 lg:px-8">
+        <h2 class="pb-8 pt-8 text-2xl md:text-3xl text-white font-bold tracking-tight text-center">Find the Best Financial Advisor Near You</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
+
+          <!-- ROW 1 -->
+          <div class="max-w-[295px]">
+            <h3 class="pb-8 pt-8 text-xl md:text-2xl text-white font-semibold tracking-tight">West</h3>
+
+            <div>
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">
+                <div class="">
+                  <div id="f-advisor-accordion-0" data-accordion="collapse" data-active-classes="text-slate-50" data-inactive-classes="text-slate-50">
+                    <!-- Accordion Button -->
+                    <h2 id="f-advisor-accordion-0-heading-1">
+                      <button type="button" class="flex items-center justify-between w-full font-semibold text-left" data-accordion-target="#f-advisor-accordion-0-body-1" aria-expanded="false" aria-controls="f-advisor-accordion-0-body-1">
+                        <span class="text-slate-50 tracking-tight">Alaska</span>
+                        <svg data-accordion-icon="" class="w-6 h-6 rotate-180 shrink-0 transform transition-transform duration-500" fill="white" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                      </button>
+                    </h2>
+                    <!-- Accordion Content -->
+                    <div id="f-advisor-accordion-0-body-1" class="" aria-labelledby="f-advisor-accordion-0-heading-1">
+                      <div class="font-light border-gray-200">
+                        <nav class="pb-2 space-y-1" aria-label="Table of Contents">
+                          <a href="#" class="text-slate-50 hover:text-slate-300 flex items-center py-1 text-xs font-normal rounded-md mt-2" aria-current="page">
+                            <span class="truncate">Anchorage, AK</span>
+                          </a>
+                          <a href="#" class="text-slate-50 hover:text-slate-300 flex items-center py-1 text-xs font-normal rounded-md">
+                            <span class="truncate">Fairbanks North Star, AK</span>
+                          </a>
+                          <a href="#" class="text-slate-50 hover:text-slate-300 flex items-center py-1 text-xs font-normal rounded-md">
+                            <span class="truncate">Juneau City and Borough, AK</span>
+                          </a>
+                          <a href="#" class="text-slate-50 hover:text-slate-300 flex items-center py-1 text-xs font-normal rounded-md">
+                            <span class="truncate">Kenai Peninsula, AK</span>
+                          </a>
+                          <a href="#" class="text-slate-50 hover:text-slate-300 flex items-center py-1 text-xs font-normal rounded-md">
+                            <span class="truncate">Ketchikan Gateway, AK</span>
+                          </a>
+                          <a href="#" class="text-slate-50 hover:text-slate-300 flex items-center py-1 text-xs font-normal rounded-md">
+                            <span class="truncate">Ketchikan, AK</span>
+                          </a>
+                          <a href="#" class="text-slate-50 hover:text-slate-300 flex items-center py-1 text-xs font-normal rounded-md">
+                            <span class="truncate">Kodiak Island, AK</span>
+                          </a>
+                          <a href="#" class="text-slate-50 hover:text-slate-300 flex items-center py-1 text-xs font-normal rounded-md">
+                            <span class="truncate">Matanuska Susitna, AK</span>
+                          </a>
+                        </nav>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">
+                <div class="">
+                  <div id="f-advisor-accordion-1" data-accordion="collapse" data-active-classes="text-slate-50" data-inactive-classes="text-slate-50">
+                    <!-- Accordion Button -->
+                    <h2 id="f-advisor-accordion-1-heading-1">
+                      <button type="button" class="flex items-center justify-between w-full font-semibold text-left" data-accordion-target="#f-advisor-accordion-1-body-1" aria-expanded="false" aria-controls="f-advisor-accordion-1-body-1">
+                        <span class="text-slate-50 tracking-tight">Arizona</span>
+                        <svg data-accordion-icon="" class="w-6 h-6 rotate-180 shrink-0 transform transition-transform duration-500" fill="white" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                      </button>
+                    </h2>
+                    <!-- Accordion Content -->
+                    <div id="f-advisor-accordion-1-body-1" class="hidden" aria-labelledby="f-advisor-accordion-1-heading-1">
+                      <div class="font-light border-gray-200">
+                        <nav class="pb-2 space-y-1" aria-label="Table of Contents">
+                          <a href="#" class="text-slate-50 hover:text-slate-300 flex items-center py-1 text-xs font-normal rounded-md mt-2" aria-current="page">
+                            <span class="truncate">First</span>
+                          </a>
+                          <a href="#" class="text-slate-50 hover:text-slate-300 flex items-center py-1 text-xs font-normal rounded-md">
+                            <span class="truncate">Middle</span>
+                          </a>
+                          <a href="#" class="text-slate-50 hover:text-slate-300 flex items-center py-1 text-xs font-normal rounded-md">
+                            <span class="truncate">Last</span>
+                          </a>
+                        </nav>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                
+
+              </div>
+              
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">California</div>
+              
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">Colorado</div>
+              
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">Hawaii</div>
+              
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">Idaho</div>
+              
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">Montana</div>
+              
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">Nevada</div>
+              
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">New Mexico</div>
+              
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">Oregon</div>
+              
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">Utah</div>
+              
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">Washinton</div>
+              
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2 border-b border-white/25">Wyoming</div>
+            </div>
+          </div>
+
+          <!-- ROW 2 -->
+          <div class="max-w-[295px]">
+            <h3 class="pb-8 pt-8 text-xl md:text-2xl text-white font-semibold tracking-tight">Midwest</h3>
+
+            <div>
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">Illinois</div>
+              
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">Indiana</div>
+              
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">Iowa</div>
+              
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">Kansas</div>
+              
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">Michigan</div>
+              
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">Minnesota</div>
+              
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">Missouri</div>
+              
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">Nebraska</div>
+              
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">North Dakota</div>
+              
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">Ohio</div>
+              
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">South Dakota</div>
+              
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2 border-b border-white/25">Wisconsin</div>
+            </div>
+          </div>
+
+          <!-- ROW 3 -->
+          <div class="max-w-[295px]">
+            <h3 class="pb-8 pt-8 text-xl md:text-2xl text-white font-semibold tracking-tight">South</h3>
+
+            <div>
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">Alabama</div>
+              
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">Arkansas</div>
+
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">Delaware</div>
+
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">Florida</div>
+
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">Georgia</div>
+
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">Kentucky</div>
+              
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">Louisiana</div>
+              
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">Maryland</div>
+              
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">Mississippi</div>
+              
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">North Carolina</div>
+              
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">Oklahoma</div>
+              
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">South Carolina</div>
+              
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">Tennessee</div>
+              
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">Texas</div>
+              
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">Virginia</div>
+              
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2 border-b border-white/25">West Virginia</div>
+            </div>
+          </div>
+
+          <!-- ROW 4 -->
+          <div class="max-w-[295px]">
+            <h3 class="pb-8 pt-8 text-xl md:text-2xl text-white font-semibold tracking-tight">Northeast</h3>
+
+            <div>
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">Connecticut</div>
+              
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">Maine</div>
+              
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">Massachusetts</div>
+              
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">New Hampshire</div>
+              
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">New Jersey</div>
+              
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">New York</div>
+              
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">Pennsylvania</div>
+              
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2">Rhode Island</div>
+              
+              <div class="text-white font-semibold text-sm border-t border-white/25 py-2 border-b border-white/25">Vermont</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Financial Advisor Accordion FIX END -->
+
+  </main>
+
+  <footer class="bg-gray-800" aria-label="Footer">
+    <!-- https://tailwindui.com/components/marketing/sections/footers#component-8fd8a490ec2fae888154eb83685bbe23 -->
+    <div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
+      <div class="flex gap-10 flex-wrap sm:flex-nowrap justify-center">
+        <div class="flex flex-wrap md:gap-10 gap-y-6 gap-y-6 w-auto mx-auto w-fit justify-center sm:justify-start">
+          <nav class="flex flex-wrap flex-col min-w-[200px] sm:min-w-max w-fit" aria-label="Footer">
+            <h3 class="text-white pr-5 py-2 uppercase font-semibold">Quick Links</h3>
+            <div>
+              <div class="pr-5 py-2">
+                <a href="#" class="text-base text-gray-200 hover:text-gray-500"> Contact Us </a>
+              </div>
+
+              <div class="pr-5 py-2">
+                <a href="#" class="text-base text-gray-200 hover:text-gray-500"> Privacy Policy </a>
+              </div>
+
+              <div class="pr-5 py-2">
+                <a href="#" class="text-base text-gray-200 hover:text-gray-500"> Terms of Use </a>
+              </div>
+
+              <div class="pr-5 py-2">
+                <a href="#" class="text-base text-gray-200 hover:text-gray-500"> Sitemap </a>
+              </div>
+            </div>
+          </nav>
+          <nav class="flex flex-wrap flex-col min-w-[200px] sm:min-w-max w-fit" aria-label="Footer">
+            <h3 class="text-white pr-5 py-2 uppercase font-semibold">Organization</h3>
+            <div>
+              <div class="pr-5 py-2">
+                <a href="#" class="text-base text-gray-200 hover:text-gray-500"> Finance Strategists </a>
+              </div>
+
+              <div class="pr-5 py-2">
+                <a href="#" class="text-base text-gray-200 hover:text-gray-500"> 213-536-9984 </a>
+              </div>
+
+              <div class="pr-5 py-2">
+                <a href="#" class="text-base text-gray-200 hover:text-gray-500"> 5550 Tech Center Drive<br>Colorado Springs, CO<br>80919</a>
+              </div>
+
+            </div>
+          </nav>
+        </div>
+        <!-- Logo -->
+        <div class="flex justify-center sm:justify-end items-center grow min-w-min">
+          <a href="#">
+            <span class="sr-only">Finance Strategists</span>
+            <img class="h-14 w-auto sm:h-12" src="assets/finance-strategists_logo_white.png" alt="">
+          </a>
+        </div>
+      </div>
+      <div class="border-t border-gray-500 mt-14">
+        <div class="w-full mt-8 text-xs text-justify text-gray-400 px-4">
+          <span class="text-gray-400 font-bold">Disclaimer:</span>
+          <p class="py-2">Content sponsored by Carbon Collective Investing, LLC, a registered investment adviser. Registration with the SEC does not imply a certain level of skill or training. Please refer to our Customer Relationship Statement and Form ADV Wrap program disclosure available at the SEC's investment adviser public information website: <a class="font-bold tracking-tight" href="https://adviserinfo.sec.gov/firm/summary/310129" target="_blank">CARBON COLLECTIVE INVESTING, LLC - Investment Adviser Firm</a> (<a class="font-bold tracking-tight" href="https://www.sec.gov/" target="_blank">sec.gov</a>).</p>
+          
+          <p class="py-2">The articles and research support materials available on this site are educational and are not intended to be investment or tax advice. Carbon Collective does not make any representations or warranties as to the accuracy, timeliness, suitability, completeness, or relevance of any information prepared by any unaffiliated third party, whether linked to Carbon Collective’s web site or incorporated herein, and takes no responsibility therefor. All such information is provided solely for convenience purposes only and all users thereof should be guided accordingly.</p>
+          
+          <p class="py-2">Investments in securities: Not FDIC Insured • No Bank Guarantee • May Lose Value. Investing in securities involves risks, and there is always the potential of losing money when you invest in securities. Before investing, consider your investment objectives and Carbon Collective's charges and expenses. Carbon Collective's internet-based advisory services are designed to assist clients in achieving discrete financial goals. They are not intended to provide comprehensive tax advice or financial planning with respect to every aspect of a client's financial situation and do not incorporate specific investments that clients hold elsewhere. For more details, see our Form CRS, Form ADV Part 2 and other disclosures. Past performance does not guarantee future results, and the likelihood of investment outcomes are hypothetical in nature. Not an offer, solicitation of an offer, or advice to buy or sell securities in jurisdictions where Carbon Collective is not registered.</p>
+        </div>
+      </div>
+
+
+      <div class="flex gap-8 sm:justify-between border-t border-gray-500 pt-5 mt-5 justify-center flex-wrap sm:flex-nowrap">
+        <p class="text-xs md:text-sm text-center text-base text-gray-200">&copy; 2022 Finance Strategists. All rights reserved.</p>
+        <div class="flex justify-center space-x-6">
+          <a href="https://www.facebook.com/FinanceStrategists/" class="text-white hover:text-gray-300">
+            <span class="sr-only">Facebook</span>
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                clip-rule="evenodd" />
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/financestrategists/" class="text-white hover:text-gray-300">
+            <span class="sr-only">Instagram</span>
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                clip-rule="evenodd" />
+            </svg>
+          </a>
+          <a href="https://twitter.com/FinStrategists" class="text-white hover:text-gray-300">
+            <span class="sr-only">Twitter</span>
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+            </svg>
+          </a>
+          <!--<a href="https://www.youtube.com/channel/UCqScqlMRSeoHXRigrf0WxLg" class="text-gray-400 hover:text-gray-500">
+              <span class="sr-only">YouTube</span>
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/company/finance-strategists/" class="text-gray-400 hover:text-gray-500">
+              <span class="sr-only">LinkedIn</span>
+              <svg class="w-6 h-6 text-blue-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path
+                  d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                ></path>
+              </svg>
+            </a>-->
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
