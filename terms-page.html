@@ -33,19 +33,21 @@
     }
   </style>
 
+<!-- Adding Flowbite Funcionality -->
+<link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
 </head>
 
 <body>
 
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-  <header class="bg-gray-800">
+  <header class="bg-gray-800 w-full z-50">
     <!-- https://tailwindui.com/components/marketing/sections/heroes#component-c2665b7bbef783e2d6683ad7e2075e10 -->
-    <div class="relative overflow-hidden max-w-7xl mx-auto">
-      <div class="bg-gray-800">
-        <div class="relative bg-gray-800 z-10">
-          <nav class="relative max-w-7xl mx-auto flex items-center justify-between bg-gray-800" aria-label="Global">
-            <div class="flex items-center flex-1 relative max-w-screen-xl">
+    <div class="relative overflow-hidden mx-auto">
+      <div class="bg-gray-800 z-50">
+        <div class="bg-gray-800 z-50 w-full">
+          <nav class="fixed lg:relative z-50 w-full mx-auto flex items-center justify-center bg-gray-800" aria-label="Global">
+            <div class="px-4 flex items-center justify-center flex-1 relative max-w-7xl">
               <div class="flex items-center justify-between w-full md:w-auto px-4 py-6 border-gray-700 border-b-2 md:border-none">
                 <a href="#">
                   <span class="sr-only">Finance Strategists</span>
@@ -122,7 +124,10 @@
               </div>
             </div>
           </div>
+          <!-- Navbar padding height -->
+          <div class="h-[88px] lg:hidden"></div>
         </div>
+        
 
         <main class="pt-6 pb-16 sm:pb-24 px-3">
           <div class="mx-auto max-w-7xl">
@@ -179,8 +184,9 @@
       <div class="flex-grow w-full max-w-8xl mx-auto xl:pb-16 xl:pt-8 lg:flex max-w-7xl mx-auto">
         <!-- Left sidebar & main wrapper -->
         <div class="flex-1 min-w-0 bg-white xl:flex xl:pl-4 relative">
-          <div class="bg-transparent border-gray-200 border-b-2 xl:flex-shrink-0 xl:w-64 sticky rounded top-2 left-0 z-10">
-            <div class="border-gray-200 border-y-2 ml-6 mr-6 mb-6 sm:ml-6 lg:ml-8 xl:ml-0 bg-white lg:sticky lg:top-2 lg:left-0">
+          <div class="bg-transparent border-gray-200 xl:w-64 z-10">
+            <div class="xl:min-w-[232px] border-gray-200 border-y-2 ml-6 mr-6 mb-6 sm:ml-6 lg:ml-8 xl:ml-0 bg-white
+            lg:sticky lg:top-0 lg:left-0">
               <!-- Start left column area -->
               <div class="h-min">
                 <div class="md-border-b-2">
@@ -247,91 +253,91 @@
                     <section class="">
                       <div class="pb-8  pt-8">
                         <h2 class="pb-6 text-2xl text-sky-900 font-bold tracking-tight">What Is a Chartered Financial Analyst (CFA)?</h2>
-                        <p class="mb-6 text-gray-500 text-md">Chartered Financial Analyst (CFA) is a designation for <a class="text-teal-600 hover:text-sky-900 font-bold" data-mil="1385" href="https://learn.financestrategists.com/finance-terms/investments/">investment</a> and finance professionals that certifies their expertise across a wide range of finance- and investment-related topics.</p>
-                        <p class="mb-6 text-gray-500 text-md">The designation is awarded by the CFA Institute.</p>
-                        <p class="mb-6 text-gray-500 text-md">An individual who has gone through and passed the institute’s rigorous program for certification is said to be a CFA charterholder.</p>
-                        <p class="mb-6 text-gray-500 text-md">The CFA designation boosts career prospects and results in tangible <a class="text-teal-600 hover:text-sky-900 font-bold" data-mil="1385" href="https://learn.financestrategists.com/finance-terms/gains-term-definition/">gains</a>, such as higher salaries, for charterholders.</p>
-                        <p class="mb-6 text-gray-500 text-md">CFA charterholders can pick from a broad array as far as choice of career is concerned.</p>
-                        <p class="mb-6 text-gray-500 text-md">They can work in various sectors of finance, from banking to <a class="text-teal-600 hover:text-sky-900 font-bold" data-mil="1385" href="https://learn.financestrategists.com/finance-terms/investment-management/">investment management</a> to corporate mergers, as well as in different industries, such as technology and arts.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">Chartered Financial Analyst (CFA) is a designation for <a class="text-teal-600 hover:text-sky-900 font-bold" data-mil="1385" href="https://learn.financestrategists.com/finance-terms/investments/">investment</a> and finance professionals that certifies their expertise across a wide range of finance- and investment-related topics.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">The designation is awarded by the CFA Institute.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">An individual who has gone through and passed the institute’s rigorous program for certification is said to be a CFA charterholder.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">The CFA designation boosts career prospects and results in tangible <a class="text-teal-600 hover:text-sky-900 font-bold" data-mil="1385" href="https://learn.financestrategists.com/finance-terms/gains-term-definition/">gains</a>, such as higher salaries, for charterholders.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">CFA charterholders can pick from a broad array as far as choice of career is concerned.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">They can work in various sectors of finance, from banking to <a class="text-teal-600 hover:text-sky-900 font-bold" data-mil="1385" href="https://learn.financestrategists.com/finance-terms/investment-management/">investment management</a> to corporate mergers, as well as in different industries, such as technology and arts.</p>
                       </div>
                     </section>
 
                     <section class="">
                       <div class="pb-8">
                         <h2 class="pb-6 text-2xl text-sky-900 font-bold tracking-tight">What Are the Duties of a Chartered Financial Analyst?</h2>
-                        <p class="mb-6 text-gray-500 text-md">A CFA designation covers all aspects of the finance industry. Hence, CFAs are most closely-associated with the banking and investment industry.</p>
-                        <p class="mb-6 text-gray-500 text-md">Their roster of duties may consist of <a class="text-teal-600 hover:text-sky-900 font-bold" data-mil="1385" href="https://learn.financestrategists.com/finance-terms/equity/">equity</a> analysis, ensuring legal and regulatory compliance, risk management, and managing a portfolio of <a class="text-teal-600 hover:text-sky-900 font-bold" data-mil="1385" href="https://learn.financestrategists.com/finance-terms/assets/">assets</a>.</p>
-                        <p class="mb-6 text-gray-500 text-md">A typical career path for an analyst may start in a junior financial analyst position and culminate in either becoming a CEO or managing a large portfolio of <a class="text-teal-600 hover:text-sky-900 font-bold" data-mil="1385" href="https://learn.financestrategists.com/finance-terms/stock/">stocks</a> and other assets.</p>
-                        <p class="mb-6 text-gray-500 text-md">They can also function as accountants or auditors, responsible for checking <a class="text-teal-600 hover:text-sky-900 font-bold" data-mil="1385" href="https://learn.financestrategists.com/explanation/introduction-to-accounting/what-is-accounting/">accounting</a> books and making sure they are in compliance with existing regulation.</p>
-                        <p class="mb-6 text-gray-500 text-md">Because finance is a pervasive function across all industries, a CFA’s job prospects are not limited to the industries above.</p>
-                        <p class="mb-6 text-gray-500 text-md">They can also find employment in other industries.</p>
-                        <p class="mb-6 text-gray-500 text-md">For example, they can work as a journalist covering <a class="text-teal-600 hover:text-sky-900 font-bold" data-mil="1385" href="https://learn.financestrategists.com/finance-terms/business/">business</a> news because they understand the arcane and complex world of banking and investment.</p>
-                        <p class="mb-6 text-gray-500 text-md">CFA charterholders who demonstrate excellent people management and leadership skills can also move through the ranks to become CEOs of their respective organizations.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">A CFA designation covers all aspects of the finance industry. Hence, CFAs are most closely-associated with the banking and investment industry.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">Their roster of duties may consist of <a class="text-teal-600 hover:text-sky-900 font-bold" data-mil="1385" href="https://learn.financestrategists.com/finance-terms/equity/">equity</a> analysis, ensuring legal and regulatory compliance, risk management, and managing a portfolio of <a class="text-teal-600 hover:text-sky-900 font-bold" data-mil="1385" href="https://learn.financestrategists.com/finance-terms/assets/">assets</a>.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">A typical career path for an analyst may start in a junior financial analyst position and culminate in either becoming a CEO or managing a large portfolio of <a class="text-teal-600 hover:text-sky-900 font-bold" data-mil="1385" href="https://learn.financestrategists.com/finance-terms/stock/">stocks</a> and other assets.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">They can also function as accountants or auditors, responsible for checking <a class="text-teal-600 hover:text-sky-900 font-bold" data-mil="1385" href="https://learn.financestrategists.com/explanation/introduction-to-accounting/what-is-accounting/">accounting</a> books and making sure they are in compliance with existing regulation.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">Because finance is a pervasive function across all industries, a CFA’s job prospects are not limited to the industries above.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">They can also find employment in other industries.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">For example, they can work as a journalist covering <a class="text-teal-600 hover:text-sky-900 font-bold" data-mil="1385" href="https://learn.financestrategists.com/finance-terms/business/">business</a> news because they understand the arcane and complex world of banking and investment.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">CFA charterholders who demonstrate excellent people management and leadership skills can also move through the ranks to become CEOs of their respective organizations.</p>
                       </div>
                     </section>
 
                     <section class="">
                       <div class="pb-8">
                         <h2 class="pb-6 text-2xl text-sky-900 font-bold tracking-tight">How to Get a CFA Certification</h2>
-                        <p class="mb-6 text-gray-500 text-md">Becoming a CFA charterholder requires intensive study and is expensive.</p>
-                        <p class="mb-6 text-gray-500 text-md">According to various estimates, it can take approximately 250 hours to 300 hours of preparation per year and <a class="text-teal-600 hover:text-sky-900 font-bold" data-mil="1385" href="https://learn.financestrategists.com/explanation/cost-accounting/what-is-cost-and-its-types/">cost</a> anywhere between $2500 to $8500.</p>
-                        <p class="mb-6 text-gray-500 text-md">Candidates aspiring to become a CFA charterholder must fulfill either one of the three eligibility requirements to be eligible for the exams.</p>
-                        <p class="mb-6 text-gray-500 text-md">They must either have an undergraduate bachelor’s degree or must be in the final year of their degree.</p>
-                        <p class="mb-6 text-gray-500 text-md">Alternately, they must have four years of professional work experience.</p>
-                        <p class="mb-6 text-gray-500 text-md">According to a factsheet on the CFA website, it takes four or more years to complete the entire program. 
+                        <p class="mb-6 text-slate-900 text-[18px]">Becoming a CFA charterholder requires intensive study and is expensive.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">According to various estimates, it can take approximately 250 hours to 300 hours of preparation per year and <a class="text-teal-600 hover:text-sky-900 font-bold" data-mil="1385" href="https://learn.financestrategists.com/explanation/cost-accounting/what-is-cost-and-its-types/">cost</a> anywhere between $2500 to $8500.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">Candidates aspiring to become a CFA charterholder must fulfill either one of the three eligibility requirements to be eligible for the exams.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">They must either have an undergraduate bachelor’s degree or must be in the final year of their degree.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">Alternately, they must have four years of professional work experience.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">According to a factsheet on the CFA website, it takes four or more years to complete the entire program. 
                         </p>
-                        <p class="mb-6 text-gray-500 text-md">Since it offers a comprehensive perspective of the finance industry, the CFA exam tests candidates on a broad range of topics.</p>
-                        <p class="mb-6 text-gray-500 text-md">Aspiring CFAs are expected to study from the Candidate Body of Knowledge (CBOK).
+                        <p class="mb-6 text-slate-900 text-[18px]">Since it offers a comprehensive perspective of the finance industry, the CFA exam tests candidates on a broad range of topics.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">Aspiring CFAs are expected to study from the Candidate Body of Knowledge (CBOK).
                         </p>
-                        <p class="mb-6 text-gray-500 text-md">The areas of study for CFA include ethical and professional standards, quantitative methods, economics, <a class="text-teal-600 hover:text-sky-900 font-bold" data-mil="1385" href="https://learn.financestrategists.com/explanation/management-accounting/financial-reporting/">financial reporting</a> and analysis, equity investments, <a class="text-teal-600 hover:text-sky-900 font-bold" data-mil="1385" href="https://learn.financestrategists.com/finance-terms/fixed-income/">fixed income</a> etc.</p>
-                        <p class="mb-6 text-gray-500 text-md">There are three parts or levels to the CFA exam.</p>
-                        <p class="mb-6 text-gray-500 text-md">The Level I exam is conducted four times a year in February, May, August, and November.</p>
-                        <p class="mb-6 text-gray-500 text-md">Up until now, it was conducted in a paper-based format across various locations around the world.</p>
-                        <p class="mb-6 text-gray-500 text-md">Starting 2021, CFA exams will be offered in computer formats in two sessions, each with a duration of two hours and fifteen minutes.</p>
-                        <p class="mb-6 text-gray-500 text-md">The number of questions per exam has also been reduced to 180 questions from the current 240 questions.</p>
-                        <p class="mb-6 text-gray-500 text-md">Levels II and III are both conducted in June and are available in 250 cities.</p>
-                        <p class="mb-6 text-gray-500 text-md">While Level I and Level II are entirely multiple-choice, Level III also has an essay question.</p>
-                        <p class="mb-6 text-gray-500 text-md">Both Level II and Level III have a duration of six hours in their paper-based format.</p>
-                        <p class="mb-6 text-gray-500 text-md">Like Level I, both will also move to an entirely computer-based format in 2021 and their duration will become 4.5 hours.</p>
-                        <p class="mb-6 text-gray-500 text-md">To become a charterholder, candidates must pass each exam in sequence i.e., they must successfully complete Level I in order to qualify for Level II and so on.</p>
-                        <p class="mb-6 text-gray-500 text-md"></p>
-                        <p class="mb-6 text-gray-500 text-md"></p>
-                        <p class="mb-6 text-gray-500 text-md"></p>
-                        <p class="mb-6 text-gray-500 text-md"></p>
+                        <p class="mb-6 text-slate-900 text-[18px]">The areas of study for CFA include ethical and professional standards, quantitative methods, economics, <a class="text-teal-600 hover:text-sky-900 font-bold" data-mil="1385" href="https://learn.financestrategists.com/explanation/management-accounting/financial-reporting/">financial reporting</a> and analysis, equity investments, <a class="text-teal-600 hover:text-sky-900 font-bold" data-mil="1385" href="https://learn.financestrategists.com/finance-terms/fixed-income/">fixed income</a> etc.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">There are three parts or levels to the CFA exam.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">The Level I exam is conducted four times a year in February, May, August, and November.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">Up until now, it was conducted in a paper-based format across various locations around the world.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">Starting 2021, CFA exams will be offered in computer formats in two sessions, each with a duration of two hours and fifteen minutes.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">The number of questions per exam has also been reduced to 180 questions from the current 240 questions.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">Levels II and III are both conducted in June and are available in 250 cities.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">While Level I and Level II are entirely multiple-choice, Level III also has an essay question.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">Both Level II and Level III have a duration of six hours in their paper-based format.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">Like Level I, both will also move to an entirely computer-based format in 2021 and their duration will become 4.5 hours.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">To become a charterholder, candidates must pass each exam in sequence i.e., they must successfully complete Level I in order to qualify for Level II and so on.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]"></p>
+                        <p class="mb-6 text-slate-900 text-[18px]"></p>
+                        <p class="mb-6 text-slate-900 text-[18px]"></p>
+                        <p class="mb-6 text-slate-900 text-[18px]"></p>
                       </div>
                     </section>
 
                     <section class="">
                       <div class="pb-8">
                         <h2 class="pb-6 text-2xl text-sky-900 font-bold tracking-tight">What Are the Benefits of CFA Designation</h2>
-                        <p class="mb-6 text-gray-500 text-md">A CFA designation is a much sought-after title and confers substantial benefits to its holders.</p>
-                        <p class="mb-6 text-gray-500 text-md">Because passing the exam requires rigor and breadth of expertise across multiple topics, CFA charterholders are considered disciplined and bright.</p>
-                        <p class="mb-6 text-gray-500 text-md">A charterholder is likely to receive a career bump once he or she passes the eligibility exam.</p>
-                        <p class="mb-6 text-gray-500 text-md">CFAs are also generously paid.</p>
-                        <p class="mb-6 text-gray-500 text-md">Depending on their position in the company hierarchy and years of experience, CFAs can earn as much as $344,000.</p>
-                        <p class="mb-6 text-gray-500 text-md">The starting salary for a financial analyst is around $80,000, which is not a shabby figure for someone who may be just out of college.</p>
-                        <p class="mb-6 text-gray-500 text-md">Another added benefit of the CFA designation is the opportunity to work across industries.</p>
-                        <p class="mb-6 text-gray-500 text-md">As mentioned earlier, the finance department is an essential component of all companies.</p>
-                        <p class="mb-6 text-gray-500 text-md">In that sense, a CFA is a generalist who can work and custom craft their job function to the industry that they work in.</p>
-                        <p class="mb-6 text-gray-500 text-md">For example, a CFA charterholder’s career may start in investment banking and progress onto technology where, after several years of getting to know the business, they may start their own company or lead an organization.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">A CFA designation is a much sought-after title and confers substantial benefits to its holders.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">Because passing the exam requires rigor and breadth of expertise across multiple topics, CFA charterholders are considered disciplined and bright.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">A charterholder is likely to receive a career bump once he or she passes the eligibility exam.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">CFAs are also generously paid.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">Depending on their position in the company hierarchy and years of experience, CFAs can earn as much as $344,000.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">The starting salary for a financial analyst is around $80,000, which is not a shabby figure for someone who may be just out of college.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">Another added benefit of the CFA designation is the opportunity to work across industries.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">As mentioned earlier, the finance department is an essential component of all companies.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">In that sense, a CFA is a generalist who can work and custom craft their job function to the industry that they work in.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">For example, a CFA charterholder’s career may start in investment banking and progress onto technology where, after several years of getting to know the business, they may start their own company or lead an organization.</p>
                       </div>
                     </section>
 
                     <section class="">
                       <div class="pb-8">
                         <h2 class="pb-6 text-2xl text-sky-900 font-bold tracking-tight">A Brief History of CFA</h2>
-                        <p class="mb-6 text-gray-500 text-md">The National Federation of Financial Analysts Societies (NFFAS) is considered a precursor to the current CFA institute.</p>
-                        <p class="mb-6 text-gray-500 text-md">It was founded in 1947 by representatives from 11 analyst societies in Boston, Chicago, New York, and Philadelphia.</p>
-                        <p class="mb-6 text-gray-500 text-md">That time coincided with a greater awareness of the importance of managing money.</p>
-                        <p class="mb-6 text-gray-500 text-md">Benjamin Graham had already published his famous tomes – The Intelligent Investor and Security Analyst – and the nation was in the beginning years of a postwar prosperity boom.</p>
-                        <p class="mb-6 text-gray-500 text-md">Analysts had refined the techniques used by newspaper journalists, who covered business, established a discipline.</p>
-                        <p class="mb-6 text-gray-500 text-md">But their profession was still considered on the <a data-mil="1385" href="https://learn.financestrategists.com/finance-terms/margin/">margins</a> of mainstream society and did not have the recognition of, say, a physician or an engineer.</p>
-                        <p class="mb-6 text-gray-500 text-md">One of the tasks of the analyst societies that came together to form NFFAS was to provide education and training to members.</p>
-                        <p class="mb-6 text-gray-500 text-md">As a start, they began offering evening classes at Northeastern University. Graham had already suggested a designation for qualified analysts, called “Quantified Security Analyst”.</p>
-                        <p class="mb-6 text-gray-500 text-md">In 1953, NFFAS commenced the process of defining expectations and course content for charter holders.</p>
-                        <p class="mb-6 text-gray-500 text-md">Members of the Chicago Society came up with the idea to test analysts in a three-stage series of eight exams.</p>
-                        <p class="mb-6 text-gray-500 text-md">A. Moyer Kulp, a senior vice president of Wellington Management, in Philadelphia is credited with setting the guidelines for CFA charterholders.</p>
-                        <p class="mb-6 text-gray-500 text-md">The Institute of Chartered Financial Analyst (ICFA) awarded its first CFA charter to George Hansen of Boston in 1963.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">The National Federation of Financial Analysts Societies (NFFAS) is considered a precursor to the current CFA institute.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">It was founded in 1947 by representatives from 11 analyst societies in Boston, Chicago, New York, and Philadelphia.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">That time coincided with a greater awareness of the importance of managing money.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">Benjamin Graham had already published his famous tomes – The Intelligent Investor and Security Analyst – and the nation was in the beginning years of a postwar prosperity boom.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">Analysts had refined the techniques used by newspaper journalists, who covered business, established a discipline.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">But their profession was still considered on the <a data-mil="1385" href="https://learn.financestrategists.com/finance-terms/margin/">margins</a> of mainstream society and did not have the recognition of, say, a physician or an engineer.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">One of the tasks of the analyst societies that came together to form NFFAS was to provide education and training to members.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">As a start, they began offering evening classes at Northeastern University. Graham had already suggested a designation for qualified analysts, called “Quantified Security Analyst”.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">In 1953, NFFAS commenced the process of defining expectations and course content for charter holders.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">Members of the Chicago Society came up with the idea to test analysts in a three-stage series of eight exams.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">A. Moyer Kulp, a senior vice president of Wellington Management, in Philadelphia is credited with setting the guidelines for CFA charterholders.</p>
+                        <p class="mb-6 text-slate-900 text-[18px]">The Institute of Chartered Financial Analyst (ICFA) awarded its first CFA charter to George Hansen of Boston in 1963.</p>
                       </div>
                     </section>
 
@@ -339,7 +345,7 @@
                     <section class="">
                       <div class="pb-8">
                         <h2 class="pb-6 text-2xl text-sky-900 font-bold tracking-tight">Chartered Financial Analyst (CFA) FAQs</h2>
-                        <div id="dropdown-accordion" data-accordion="open" class="border-b-2" data-active-classes="bg-white text-gray-900" data-inactive-classes="text-gray-500">
+                        <div id="dropdown-accordion" data-accordion="open" class="border-b-2" data-active-classes="bg-white text-gray-900" data-inactive-classes="text-slate-900">
 
                           <h3 id="dropdown-accordion-heading-1">
                             <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left border-t-2 bg-white text-gray-900" data-accordion-target="#dropdown-accordion-body-1" aria-expanded="true" aria-controls="dropdown-accordion-body-1">
@@ -349,7 +355,7 @@
                           </h3>
                           <div id="dropdown-accordion-body-1" class="" aria-labelledby="dropdown-accordion-heading-1">
                             <div class="py-5 font-light">
-                              <p class="mb-2 text-gray-500 text-md">CFA stands for Chartered Financial Analyst, which is the designation that most portfolio managers either have or try to obtain.</p>
+                              <p class="mb-2 text-slate-900 text-[18px]">CFA stands for Chartered Financial Analyst, which is the designation that most portfolio managers either have or try to obtain.</p>
                             </div>
                           </div>
 
@@ -361,7 +367,7 @@
                           </h3>
                           <div id="dropdown-accordion-body-2" class="" aria-labelledby="dropdown-accordion-heading-2">
                             <div class="py-5 font-light">
-                              <p class="mb-2 text-gray-500 text-md">Text</p>
+                              <p class="mb-2 text-slate-900 text-[18px]">Text</p>
                             </div>
                           </div>
 
@@ -373,7 +379,7 @@
                           </h3>
                           <div id="dropdown-accordion-body-3" class="" aria-labelledby="dropdown-accordion-heading-3">
                             <div class="py-5 font-light">
-                              <p class="mb-2 text-gray-500 text-md">Text</p>
+                              <p class="mb-2 text-slate-900 text-[18px]">Text</p>
                             </div>
                           </div>
 
@@ -385,7 +391,7 @@
                           </h3>
                           <div id="dropdown-accordion-body-4" class="" aria-labelledby="dropdown-accordion-heading-4">
                             <div class="py-5 font-light">
-                              <p class="mb-2 text-gray-500 text-md">Text</p>
+                              <p class="mb-2 text-slate-900 text-[18px]">Text</p>
                             </div>
                           </div>
 
@@ -397,7 +403,7 @@
                           </h3>
                           <div id="dropdown-accordion-body-5" class="" aria-labelledby="dropdown-accordion-heading-5">
                             <div class="py-5 font-light">
-                              <p class="mb-2 text-gray-500 text-md">Text</p>
+                              <p class="mb-2 text-slate-900 text-[18px]">Text</p>
                             </div>
                           </div>
 
@@ -416,14 +422,14 @@
 
                             <!-- Icons for Social Media Links -->
                             <div class="text-teal-600 flex justify-start space-x-3 md:space-x-4 ">
-                              <a target="_blank" href="https://www.facebook.com/truetamplinofficial/" class="text-gray-400 hover:text-gray-500">
+                              <a target="_blank" href="https://www.facebook.com/truetamplinofficial/" class="text-gray-400 hover:text-slate-900">
                                 <span class="sr-only">Facebook</span>
                                 <svg class="h-4 w-4 fill-teal-600 hover:fill-teal-600/75" viewBox="0 0 24 24" aria-hidden="true">
                                   <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
                                 </svg>
                               </a>
                               
-                              <a target="_blank" href="https://www.linkedin.com/in/truetamplin/" class="text-gray-400 hover:text-gray-500">
+                              <a target="_blank" href="https://www.linkedin.com/in/truetamplin/" class="text-gray-400 hover:text-slate-900">
                                 <span class="sr-only">Linkedin</span>
                                 <svg class="h-4 w-4 fill-teal-600 hover:fill-teal-600/75"
                                   xmlns="http://www.w3.org/2000/svg"
@@ -434,21 +440,21 @@
                                 </svg>
                               </a>
                       
-                              <a target="_blank" href="https://www.instagram.com/truetamplin/" class="text-gray-400 hover:text-gray-500">
+                              <a target="_blank" href="https://www.instagram.com/truetamplin/" class="text-gray-400 hover:text-slate-900">
                                 <span class="sr-only">Instagram</span>
                                 <svg class="h-4 w-4 fill-teal-600 hover:fill-teal-600/75" viewBox="0 0 24 24" aria-hidden="true">
                                   <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" />
                                 </svg>
                               </a>
                       
-                              <a target="_blank" href="https://twitter.com/truetamplin" class="text-gray-400 hover:text-gray-500">
+                              <a target="_blank" href="https://twitter.com/truetamplin" class="text-gray-400 hover:text-slate-900">
                                 <span class="sr-only">Twitter</span>
                                 <svg class="h-4 w-4 fill-teal-600 hover:fill-teal-600/75" viewBox="0 0 24 24" aria-hidden="true">
                                   <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
                                 </svg>
                               </a>
                       
-                              <a target="_blank" href="https://www.youtube.com/channel/UC_GcH_kZrnDgshvXerlwx-Q" class="text-gray-400 hover:text-gray-500">
+                              <a target="_blank" href="https://www.youtube.com/channel/UC_GcH_kZrnDgshvXerlwx-Q" class="text-gray-400 hover:text-slate-900">
                                 <span class="sr-only">Youtube</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 fill-teal-600 hover:fill-teal-600/75" viewBox="0 0 16 16"> <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
                                 </svg>
@@ -458,11 +464,11 @@
                           </div>
                         </div>
                         <div>
-                          <p class="mb-6 text-gray-500 text-sm leading-6">True Tamplin is a published author, public speaker, CEO of UpDigital, and founder of Finance Strategists.</p>
+                          <p class="mb-6 text-slate-900 text-sm leading-6">True Tamplin is a published author, public speaker, CEO of UpDigital, and founder of Finance Strategists.</p>
 
-                          <p class="mb-6 text-gray-500 text-sm leading-6">True is a Certified Educator in Personal Finance (CEPF®), author of <a class="text-teal-600 hover:text-sky-900 font-bold" href="https://books.google.com/books?id=ZsOPEAAAQBAJ">The Handy Financial Ratios Guide</a>, a member of the Society for Advancing Business Editing and Writing, contributes to his financial education site, Finance Strategists, and has spoken to various financial communities such as the <a class="text-teal-600 hover:text-sky-900 font-bold" href="https://www.cfasociety.org/orangecounty/Lists/Events%20Calendar/DispForm.aspx?ID=960&amp;ContentTypeId=0x010200B3715C9502B46541BE06BD68E9735E320101005276EB7685500C4B8B1FE406738977A7">CFA Institute</a>, as well as university students like his Alma mater, <a class="text-teal-600 hover:text-sky-900 font-bold" href="https://www.biola.edu/blogs/business-ministry-life/2019/true-tamplin-create-your-own-momentum">Biola University</a>, where he received a bachelor of science in business and data analytics.</p>
+                          <p class="mb-6 text-slate-900 text-sm leading-6">True is a Certified Educator in Personal Finance (CEPF®), author of <a class="text-teal-600 hover:text-sky-900 font-bold" href="https://books.google.com/books?id=ZsOPEAAAQBAJ">The Handy Financial Ratios Guide</a>, a member of the Society for Advancing Business Editing and Writing, contributes to his financial education site, Finance Strategists, and has spoken to various financial communities such as the <a class="text-teal-600 hover:text-sky-900 font-bold" href="https://www.cfasociety.org/orangecounty/Lists/Events%20Calendar/DispForm.aspx?ID=960&amp;ContentTypeId=0x010200B3715C9502B46541BE06BD68E9735E320101005276EB7685500C4B8B1FE406738977A7">CFA Institute</a>, as well as university students like his Alma mater, <a class="text-teal-600 hover:text-sky-900 font-bold" href="https://www.biola.edu/blogs/business-ministry-life/2019/true-tamplin-create-your-own-momentum">Biola University</a>, where he received a bachelor of science in business and data analytics.</p>
                           
-                          <p class="mb-6 text-gray-500 text-sm leading-6">To learn more about True, visit his <a class="text-teal-600 hover:text-sky-900 font-bold" href="https://www.truetamplin.com/">personal website</a>, view his author profile on <a class="text-teal-600 hover:text-sky-900 font-bold" href="https://www.amazon.com/True-Tamplin/e/B07D43CN9Z%3Fref=dbs_a_mng_rwt_scns_share">Amazon</a>, or check out his speaker profile on the <a class="text-teal-600 hover:text-sky-900 font-bold" href="https://societyspeakers.cfainstitute.org/speaker/true-tamplin?b=s">CFA Institute website</a>.</p>
+                          <p class="mb-6 text-slate-900 text-sm leading-6">To learn more about True, visit his <a class="text-teal-600 hover:text-sky-900 font-bold" href="https://www.truetamplin.com/">personal website</a>, view his author profile on <a class="text-teal-600 hover:text-sky-900 font-bold" href="https://www.amazon.com/True-Tamplin/e/B07D43CN9Z%3Fref=dbs_a_mng_rwt_scns_share">Amazon</a>, or check out his speaker profile on the <a class="text-teal-600 hover:text-sky-900 font-bold" href="https://societyspeakers.cfainstitute.org/speaker/true-tamplin?b=s">CFA Institute website</a>.</p>
                         </div>
                       </div>
                     </section>
@@ -509,19 +515,98 @@
         </div>
 
         <div class="lg:flex-shrink-0 px-4 z-10">
-          <div class="h-full lg:w-60">
+          <div class="h-full lg:w-60 lg:sticky lg:top-0 lg:right-0 max-w-3xl mx-auto">
             <!-- Start right column area -->
             <div class="h-full relative">
-              <div class="pb-6 text-xl text-sky-900 font-bold tracking-tight">
+
+              <!-- Chapters section -->
+              <div class="border-2 border-black-2 mb-4">
+                <section class="w-full lg:max-w-sm px-2 py-2 lg:p-0 lg:overflow-hidden overflow-x-auto">
+                  <div class="">
+                    <ul class="flex gap-4 lg:flex-col h-full w-full">
+                      <li class="flex w-60 h-24 bg-slate-600 border border-black-2">
+                        <a class="px-4 py-3 w-60 h-24 h-full" href="#">Chapter 1</a>
+                      </li>
+                      <li class="flex w-60 h-24 bg-slate-600 border border-black-2">
+                        <a class="px-4 py-3 w-60 h-24 h-full" href="#">Chapter 2</a>
+                      </li>
+                      <li class="flex w-60 h-24 bg-slate-600 border border-black-2">
+                        <a class="px-4 py-3 w-60 h-24 h-full" href="#">Chapter 3</a>
+                      </li>
+                      <li class="flex w-60 h-24 bg-slate-600 border border-black-2">
+                        <a class="px-4 py-3 w-60 h-24 h-full" href="#">Chapter 4</a>
+                        </li>
+                      <li class="flex w-60 h-24 bg-slate-600 border border-black-2">
+                        <a class="px-4 py-3 w-60 h-24 h-full" href="#">Chapter 5</a>
+                        </li>
+                    </ul>
+                  </div>
+                </section>
+              </div>
+              <!-- Chapters section end -->
+
+              <!-- Start of sticky -->
+              <div class="pb-6 text-xl text-sky-900 font-bold tracking-tight
+              lg:sticky lg:top-0 lg:left-0">
                 <div class="flex flex-wrap justify-center">
                   <!-- Sticky CTA -->
                   <div class="pl-3 pr-3 pb-10 pt-4 border-y-2 flex-grow justify-center flex sm:flex-nowrap">
                     <div class="min-w-[232px]">
                       <h2 class="pb-4 pt-6 text-xl text-sky-900 font-bold tracking-tight">Get Help Now!</h2>
-                      <p class="text-gray-500 flex items-center py-4 text-sm font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae nostrum repellendus ipsam exercitationem necessitatibus accusamus quasi possimus non est sequi consequatur, dignissimos incidunt at distinctio. Debitis sint doloremque harum placeat!</p>
-                      <button class="w-36 bg-teal-600 hover:text-teal-600 border-teal-600 font-semibold text-white py-2 px-4 hover:border-current hover:bg-transparent border-2 rounded-md text-sm">
+                      <p class="text-slate-900 flex items-center py-4 text-sm font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae nostrum repellendus ipsam exercitationem necessitatibus accusamus quasi possimus non est sequi consequatur, dignissimos incidunt at distinctio. Debitis sint doloremque harum placeat!</p>
+
+                      <!-- tailwind button -->
+                      
+                      <div>
+                        <button class="px-6 py-3 bg-teal-600 text-gray-100 rounded shadow" id="delete-btn">
+                              Get Help Now 
+                          </button>
+                      
+                          <div class="bg-black bg-opacity-50 fixed inset-0 hidden justify-center items-center" id="overlay">
+                              <div class="bg-white max-w-sm py-5 px-6 rounded shadow-xl text-sky-900">
+                                  <div class="flex justify-between items-center">
+                                      <h4 class="text-lg font-bold">Get Help</h4>
+                                      <svg class="h-6 w-6 cursor-pointer p-1 hover:bg-gray-200 rounded-full" id="close-modal" fill="currentColor" viewBox="0 0 20 20">
+                                          <path fill-rule="evenodd"
+                                              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                              clip-rule="evenodd"></path>
+                                      </svg>
+                                  </div>
+                                  <div class="mt-2 text-sm">
+                                      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, sunt.</p>
+                                  </div>
+                                  <div class="mt-3 flex justify-end space-x-3">
+                                      <button class="px-3 py-1 rounded hover:bg-teal-900 hover:bg-opacity-50 hover:text-teal-900">Cancel</button>
+                                      <button class="px-3 py-1 bg-teal-800 text-gray-200 hover:bg-teal-600 rounded">Get Help</button>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      
+                    
+                      <!-- Functionality for Modal -->
+                      <script>
+                        window.addEventListener('DOMContentLoaded', () =>{
+                          const overlay = document.querySelector('#overlay');
+                          const delBtn = document.querySelector('#delete-btn');
+                          const closeBtn = document.querySelector('#close-modal');
+
+                          const toggleModal = () => {
+                              overlay.classList.toggle('hidden');
+                              overlay.classList.toggle('flex');
+                          };
+
+                          delBtn.addEventListener('click', toggleModal);
+
+                          closeBtn.addEventListener('click', toggleModal);
+                        });
+                      </script>
+
+                      <!-- <button class="w-36 bg-teal-600 hover:text-teal-600 border-teal-600 font-semibold text-white py-2 px-4 hover:border-current hover:bg-transparent border-2 rounded-md text-sm">
                         <span>Get Help Now!</span>
-                      </button>
+                      </button> -->
+
+
                     </div>
                   </div>
                 </div>
@@ -758,19 +843,19 @@
             <h3 class="text-white pr-5 py-2 uppercase font-semibold">Quick Links</h3>
             <div>
               <div class="pr-5 py-2">
-                <a href="#" class="text-base text-gray-200 hover:text-gray-500"> Contact Us </a>
+                <a href="#" class="text-base text-gray-200 hover:text-slate-900"> Contact Us </a>
               </div>
 
               <div class="pr-5 py-2">
-                <a href="#" class="text-base text-gray-200 hover:text-gray-500"> Privacy Policy </a>
+                <a href="#" class="text-base text-gray-200 hover:text-slate-900"> Privacy Policy </a>
               </div>
 
               <div class="pr-5 py-2">
-                <a href="#" class="text-base text-gray-200 hover:text-gray-500"> Terms of Use </a>
+                <a href="#" class="text-base text-gray-200 hover:text-slate-900"> Terms of Use </a>
               </div>
 
               <div class="pr-5 py-2">
-                <a href="#" class="text-base text-gray-200 hover:text-gray-500"> Sitemap </a>
+                <a href="#" class="text-base text-gray-200 hover:text-slate-900"> Sitemap </a>
               </div>
             </div>
           </nav>
@@ -778,15 +863,15 @@
             <h3 class="text-white pr-5 py-2 uppercase font-semibold">Organization</h3>
             <div>
               <div class="pr-5 py-2">
-                <a href="#" class="text-base text-gray-200 hover:text-gray-500"> Finance Strategists </a>
+                <a href="#" class="text-base text-gray-200 hover:text-slate-900"> Finance Strategists </a>
               </div>
 
               <div class="pr-5 py-2">
-                <a href="#" class="text-base text-gray-200 hover:text-gray-500"> 213-536-9984 </a>
+                <a href="#" class="text-base text-gray-200 hover:text-slate-900"> 213-536-9984 </a>
               </div>
 
               <div class="pr-5 py-2">
-                <a href="#" class="text-base text-gray-200 hover:text-gray-500"> 5550 Tech Center Drive<br>Colorado Springs, CO<br>80919</a>
+                <a href="#" class="text-base text-gray-200 hover:text-slate-900"> 5550 Tech Center Drive<br>Colorado Springs, CO<br>80919</a>
               </div>
 
             </div>
@@ -838,13 +923,13 @@
                 d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
             </svg>
           </a>
-          <!--<a href="https://www.youtube.com/channel/UCqScqlMRSeoHXRigrf0WxLg" class="text-gray-400 hover:text-gray-500">
+          <!--<a href="https://www.youtube.com/channel/UCqScqlMRSeoHXRigrf0WxLg" class="text-gray-400 hover:text-slate-900">
               <span class="sr-only">YouTube</span>
               <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
               </svg>
             </a>
-            <a href="https://www.linkedin.com/company/finance-strategists/" class="text-gray-400 hover:text-gray-500">
+            <a href="https://www.linkedin.com/company/finance-strategists/" class="text-gray-400 hover:text-slate-900">
               <span class="sr-only">LinkedIn</span>
               <svg class="w-6 h-6 text-blue-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                 <path
@@ -857,6 +942,8 @@
     </div>
   </footer>
 
+  <!-- Adding Flowbite Funcionality -->
+  <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
 </body>
 
 </html>
